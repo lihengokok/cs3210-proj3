@@ -63,7 +63,6 @@ static void createNodeAndAdd(const char * path, const char * fileName, struct tn
 	strcpy(snap->name + strlen(path) + 1, fileName);
 	snap->name[strlen(path) + strlen(fileName) + 1] = '\0';
 	lstat(snap->name, statbuf);
-	/* If it's not a directory free everything */
 	if(S_ISDIR(statbuf->st_mode))
 	{
 		free(snap->name);
@@ -71,9 +70,9 @@ static void createNodeAndAdd(const char * path, const char * fileName, struct tn
 		free(statbuf);
 		return;
 	}
-	printf("%s\n", snap->name);
+	//printf("%s\n", snap->name);
 	snap->time = statbuf->st_mtime;
-	/*printf("%i\n", (int)snap->time);*/
+	//printf("%i\n", (int)snap->time);
 	tnode_insert(rootNode, snap, snapshotComp);
 	free(statbuf);
 }
@@ -1071,7 +1070,6 @@ int main(int argc, char *argv[])
 	//set up the tree
 	mydir = opendir(bb_data->rootdir);
     entry = NULL;
-    /*  */
     while((entry = readdir(mydir))) /* If we get EOF, the expression is 0 and
                                      * the loop stops. */
     {
