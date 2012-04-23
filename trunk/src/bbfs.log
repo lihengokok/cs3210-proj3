@@ -1,0 +1,6 @@
+
+bb_init()
+
+bb_opendir(path="/", fi=0xb77d4200)
+
+bb_readdir(path="/", buf=0x091bb400, filler=0x00614090, offset=0, fi=0xb6fb11d0)
