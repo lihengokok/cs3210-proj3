@@ -37,3 +37,10 @@ void print_postorder(struct tnode *p, printer);
 
 int snapshotComp(void* a, void* b);
 void snapshotPrint(void* a);
+
+struct tnode* firstPic(time_t beginTime, struct tnode* node);
+struct tnode* lastPic(time_t beginTime, struct tnode* node);
+void traverseAndFillBuffer(struct tnode *start, struct tnode *end, void* buf, fuse_fill_dir_t filler);
+int traverseInOrderFillBuffer(struct tnode *node, struct tnode *end, void* buf, fuse_fill_dir_t filler);
+void fillBuffer(time_t start, time_t end, struct tnode* rootNode, void* buf, fuse_fill_dir_t filler);
+
