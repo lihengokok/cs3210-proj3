@@ -690,9 +690,9 @@ int bb_removexattr(const char *path, const char *name)
  
 int bb_opendir(const char *path, struct fuse_file_info *fi)
 {
-	DIR *dp;
+	/*DIR *dp;*/
 	int retstat = 0;
-	char fpath[PATH_MAX];
+	/*char fpath[PATH_MAX];*/
 	struct tm date;
 	  
 	//Note, this is the scenario where it ends in a folder name
