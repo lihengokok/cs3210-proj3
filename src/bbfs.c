@@ -687,26 +687,39 @@ int bb_removexattr(const char *path, const char *name)
  *
  * Introduced in version 2.3
  */
+ 
 int bb_opendir(const char *path, struct fuse_file_info *fi)
 {
 	DIR *dp;
 	int retstat = 0;
 	char fpath[PATH_MAX];
+	struct tm date;
+	  
+	//Note, this is the scenario where it ends in a folder name
+	//If it doesn't, in this case, it fails
+	date = pathToTmComplete(path);
+	if(isZero(&date))
+		retstat = bb_error("bb_getattr lstat");
+	else
+	{
+		
+		return 0;
+	}
 	
-	log_msg("\nbb_opendir(path=\"%s\", fi=0x%08x)\n",
-	  path, fi);
-	/*bb_fullpath(fpath, path);
+	log_msg("\nbb_opendir(path=\"%s\", fi=0x%08x)\n", path, fi);
+	bb_fullpath(fpath, path);
 	
 	dp = opendir(fpath);
 	if (dp == NULL)
-	retstat = bb_error("bb_opendir opendir");
+		retstat = bb_error("bb_opendir opendir");
 	
 	fi->fh = (intptr_t) dp;
 	
-	log_fi(fi);*/
+	log_fi(fi);
 	
 	return retstat;
 }
+
 
 /** Read directory
  *
@@ -735,6 +748,47 @@ int bb_readdir(const char *path, void *buf, fuse_fill_dir_t filler, off_t offset
 	int retstat = 0;
 	DIR *dp;
 	struct dirent *de;
+	struct tm date;
+	  
+	//Note, this is the scenario where it ends in a folder name
+	//If it doesn't, in this case, it fails
+	date = pathToTmComplete(path);
+	if(isZero(&date))
+		retstat = bb_error("BB dir doesn't exist");
+	else
+	{
+		filler(buf, ".", NULL, 0);
+		filler(buf, "..", NULL, 0);
+		if(date.tm_mon == -1) //in this case, only a year was specified
+		{
+			filler(buf, "jan", NULL, 0);
+			filler(buf, "feb", NULL, 0);
+			filler(buf, "mar", NULL, 0);
+			filler(buf, "apr", NULL, 0);
+			filler(buf, "may", NULL, 0);
+			filler(buf, "jun", NULL, 0);
+			filler(buf, "jul", NULL, 0);
+			filler(buf, "aug", NULL, 0);
+			filler(buf, "sep", NULL, 0);
+			filler(buf, "oct", NULL, 0);
+			filler(buf, "nov", NULL, 0);
+			filler(buf, "dec", NULL, 0);
+		}
+		else if(date.tm_mday == -1)
+		{
+			int i;
+			char asString[20];
+			int daysCount = daysInMonth(date);
+			for(i = 1; i <= daysCount; i++)
+			{
+				log_msg("Right Here\n");
+				sprintf(asString, "%02d", i);
+				log_msg("Here\n");
+				filler(buf, asString, NULL, 0);
+			}
+		}
+		return 0;
+	}
 	
 	log_msg("\nbb_readdir(path=\"%s\", buf=0x%08x, filler=0x%08x, offset=%lld, fi=0x%08x)\n",
 		path, buf, filler, offset, fi);
@@ -1055,6 +1109,7 @@ int main(int argc, char *argv[])
 	if ((argc - i) != 2) bb_usage();
 	
 	bb_data->rootdir = realpath(argv[i], NULL);
+	
 	
 	permissionsFile = malloc(sizeof(struct stat));
 	permissionsFolder = malloc(sizeof(struct stat));

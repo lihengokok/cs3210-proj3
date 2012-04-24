@@ -2,11 +2,42 @@
 #include <time.h>
 #include <string.h>
 #include <fuse.h>
+#include <time.h>
+#include <stdio.h>
 
 #include "date_utils.h"
 #include "log.h"
 
 struct tm zeroDate = {0};
+
+
+
+int daysInMonth(struct tm date)
+{
+	time_t time;
+	struct tm* modifiedDate;
+	int originalMonth;
+	int i;
+	modifiedDate = localtime(&time);
+	date.tm_mday = 1;
+	date.tm_sec = 0;
+	date.tm_min = 0;
+	date.tm_hour = 1;
+	*modifiedDate = date;
+	originalMonth = date.tm_mon;
+	for(i = 0; i < 34; i++)
+	{
+		time = mktime(modifiedDate);
+		time += 86400;
+		modifiedDate = localtime(&time);
+		log_msg("Month: %i, Day: %i\n", modifiedDate->tm_mon, modifiedDate->tm_mday);
+		if(modifiedDate->tm_mon != originalMonth)
+			return i + 1;
+	}
+	
+	log_msg("\nSerious Month day conversion error\n");
+	return -1;
+}
 
 int isZero(struct tm* date)
 {
