@@ -7,6 +7,7 @@ struct tnode
 	void* data;
 	struct tnode *left;
 	struct tnode *right;
+	struct tnode *parent;
 };
 
 struct t_snapshot

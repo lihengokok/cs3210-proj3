@@ -3,6 +3,53 @@
 
 #include "btree.h"
 
+
+filler(buf, "jan", NULL, 0);
+
+//Make sure beginTime is earlier than pic time
+struct tnode* firstPic(time_t beginTime)
+{
+	if(beginTime)
+}
+struct tnode* lastPic(time_t endTime)
+{
+	
+}
+
+//The upper bound is excluded, the lower bound is included
+void traverseAndFillBuffer(struct tnode *start, struct tnode *end, void* buf)
+{
+	struct tnode *current, *parent;
+	int keepGoing = 1;
+	while(keepGoing == 1)
+	{
+		parent = current->parent;
+		//if we went left, ignore everything
+		//otherwise, do this:
+		if(parent->left == current) 
+		{
+			filler(buf, ((struct t_snapshot*)(parent->data))->name, NULL, 0);
+			if(parent == end)
+				return;
+			if(traverseInOrderFillBuffer(parent->right, end, buf) == 1)
+				return;
+		}
+	}
+}
+
+int traverseInOrderFillBuffer(struct tnode *node, struct tnode *end, void* buf)
+{
+	if(node != NULL) 
+	{
+		if(traverseInOrderFillBuffer(node->left, end, buf) == 1)
+			return 1;
+		filler(buf, ((struct t_snapshot*)(node->data))->name, NULL, 0);
+		if(node == end)
+			return 1;
+		return traverseInOrderFillBuffer(node->right, end, buf);
+	}
+}
+
 int snapshotComp(void* a, void* b)
 {
 	struct t_snapshot *first, *second;
@@ -27,7 +74,7 @@ struct tnode *tnode_insert(struct tnode *p, void* value, comparator compFunc) {
   /* insert [new] tnode as root node */
   p = (struct tnode *)malloc(sizeof(struct tnode));
   p->data = value;
-  p->left = p->right = NULL;
+  p->left = p->right = p->parent = NULL;
  } else {
   tmp_one = p;
   /* Traverse the tree to get a pointer to the specific tnode */
@@ -43,12 +90,14 @@ struct tnode *tnode_insert(struct tnode *p, void* value, comparator compFunc) {
   if(compFunc(tmp_two ->data, value) > 0) {
    /* insert [new] tnode as left child */
    tmp_two->left = (struct tnode *)malloc(sizeof(struct tnode));
+   tmp_two->left->parent = tmp_two->left;
    tmp_two = tmp_two->left;
    tmp_two->data = value;
    tmp_two->left = tmp_two->right = NULL;
   } else {
    /* insert [new] tnode as left child */
    tmp_two->right = (struct tnode *)malloc(sizeof(struct tnode)); 
+   tmp_two->right->parent = tmp_two->right;
    tmp_two = tmp_two->right;
    tmp_two->data = value;
    tmp_two->left = tmp_two->right = NULL;
