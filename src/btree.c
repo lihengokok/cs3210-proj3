@@ -1,29 +1,87 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include "params.h"
 
+#include <ctype.h>
+#include <dirent.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <fuse.h>
+#include <libgen.h>
+#include <limits.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/xattr.h>
+
+#include <time.h>
+
+#include "date_utils.h"
+#include "log.h"
 #include "btree.h"
 
-
-filler(buf, "jan", NULL, 0);
-
 //Make sure beginTime is earlier than pic time
-struct tnode* firstPic(time_t beginTime)
+struct tnode* firstPic(time_t beginTime, struct tnode* node)
 {
-	if(beginTime)
+	if(node == NULL) return NULL;
+	if(((struct t_snapshot*)(node->data))->time > beginTime)
+	{
+		struct tnode* test = firstPic(beginTime, node->left);
+		if(test != NULL) return test;
+		else return node;
+	}
+	else
+	{
+		return firstPic(beginTime, node->right);
+	}
 }
-struct tnode* lastPic(time_t endTime)
+struct tnode* lastPic(time_t beginTime, struct tnode* node)
 {
-	
+	if(node == NULL) return NULL;
+	if(((struct t_snapshot*)(node->data))->time < beginTime)
+	{
+		struct tnode* test = lastPic(beginTime, node->right);
+		if(test != NULL) return test;
+		else return node;
+	}
+	else
+	{
+		return lastPic(beginTime, node->left);
+	}
+}
+
+void fillBuffer(time_t start, time_t end, struct tnode* rootNode, void* buf, fuse_fill_dir_t filler)
+{
+	struct tnode* first, *last;
+	if(rootNode != NULL)
+	{
+		log_msg("\nRoot node start time %i\n", ((struct t_snapshot*)(rootNode->data))->time);
+	}
+	else
+		log_msg("\nRoot node is null\n");
+	first = firstPic(start, rootNode);
+	last = lastPic(end, rootNode);
+	if(first != NULL && last != NULL)
+	{
+		log_msg("\nstart and end good\n");
+		traverseAndFillBuffer(first, last, buf, filler);
+	}
 }
 
 //The upper bound is excluded, the lower bound is included
-void traverseAndFillBuffer(struct tnode *start, struct tnode *end, void* buf)
+void traverseAndFillBuffer(struct tnode *start, struct tnode *end, void* buf, fuse_fill_dir_t filler)
 {
 	struct tnode *current, *parent;
 	int keepGoing = 1;
+	current = start;
+	filler(buf, ((struct t_snapshot*)(start->data))->name, NULL, 0);
+	traverseInOrderFillBuffer(start->right, end, buf, filler);
 	while(keepGoing == 1)
 	{
 		parent = current->parent;
+		if(parent == NULL)
+			return;
+		
 		//if we went left, ignore everything
 		//otherwise, do this:
 		if(parent->left == current) 
@@ -31,23 +89,24 @@ void traverseAndFillBuffer(struct tnode *start, struct tnode *end, void* buf)
 			filler(buf, ((struct t_snapshot*)(parent->data))->name, NULL, 0);
 			if(parent == end)
 				return;
-			if(traverseInOrderFillBuffer(parent->right, end, buf) == 1)
+			if(traverseInOrderFillBuffer(parent->right, end, buf, filler) == 1)
 				return;
 		}
 	}
 }
 
-int traverseInOrderFillBuffer(struct tnode *node, struct tnode *end, void* buf)
+int traverseInOrderFillBuffer(struct tnode *node, struct tnode *end, void* buf, fuse_fill_dir_t filler)
 {
 	if(node != NULL) 
 	{
-		if(traverseInOrderFillBuffer(node->left, end, buf) == 1)
+		if(traverseInOrderFillBuffer(node->left, end, buf, filler) == 1)
 			return 1;
 		filler(buf, ((struct t_snapshot*)(node->data))->name, NULL, 0);
 		if(node == end)
 			return 1;
-		return traverseInOrderFillBuffer(node->right, end, buf);
+		return traverseInOrderFillBuffer(node->right, end, buf, filler);
 	}
+	return 0;
 }
 
 int snapshotComp(void* a, void* b)

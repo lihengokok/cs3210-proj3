@@ -51,7 +51,7 @@ struct tnode *root;
 
 //Note: we're also going to populate the time period dirs
 //as we iterate over these photos
-static void createNodeAndAdd(const char * path, const char * fileName, struct tnode *rootNode)
+static void createNodeAndAdd(const char * path, const char * fileName, struct tnode **rootNode)
 {
 	struct t_snapshot* snap;
 	struct stat *statbuf;
@@ -73,7 +73,7 @@ static void createNodeAndAdd(const char * path, const char * fileName, struct tn
 	//printf("%s\n", snap->name);
 	snap->time = statbuf->st_mtime;
 	//printf("%i\n", (int)snap->time);
-	tnode_insert(rootNode, snap, snapshotComp);
+	*rootNode = tnode_insert(*rootNode, snap, snapshotComp);
 	free(statbuf);
 }
 
@@ -690,16 +690,19 @@ int bb_removexattr(const char *path, const char *name)
  
 int bb_opendir(const char *path, struct fuse_file_info *fi)
 {
-	/*DIR *dp;*/
+	DIR *dp;
 	int retstat = 0;
-	/*char fpath[PATH_MAX];*/
+	char fpath[PATH_MAX];
 	struct tm date;
 	  
 	//Note, this is the scenario where it ends in a folder name
 	//If it doesn't, in this case, it fails
 	date = pathToTmComplete(path);
 	if(isZero(&date))
+	{
 		retstat = bb_error("bb_getattr lstat");
+		//return retstat;
+	}
 	else
 	{
 		
@@ -761,6 +764,7 @@ int bb_readdir(const char *path, void *buf, fuse_fill_dir_t filler, off_t offset
 		filler(buf, "..", NULL, 0);
 		if(date.tm_mon == -1) //in this case, only a year was specified
 		{
+			time_t start, end;
 			filler(buf, "jan", NULL, 0);
 			filler(buf, "feb", NULL, 0);
 			filler(buf, "mar", NULL, 0);
@@ -773,6 +777,18 @@ int bb_readdir(const char *path, void *buf, fuse_fill_dir_t filler, off_t offset
 			filler(buf, "oct", NULL, 0);
 			filler(buf, "nov", NULL, 0);
 			filler(buf, "dec", NULL, 0);
+			date.tm_mon = 0;
+			date.tm_mday = 1;
+			date.tm_hour = 0;
+			date.tm_min = 0;
+			date.tm_sec = 0;
+			start = mktime(&date);
+			date.tm_year++;
+			end = mktime(&date);
+			log_msg("\nStart Time: %i\n", start);
+			log_msg("\nEnd Time: %i\n", end);
+			
+			fillBuffer(start, end, root, buf, filler);
 		}
 		else if(date.tm_mday == -1)
 		{
@@ -1128,7 +1144,7 @@ int main(int argc, char *argv[])
     while((entry = readdir(mydir))) /* If we get EOF, the expression is 0 and
                                      * the loop stops. */
     {
-		createNodeAndAdd(bb_data->rootdir, entry->d_name, root);
+		createNodeAndAdd(bb_data->rootdir, entry->d_name, &root);
         //printf("%s\n", entry->d_name);
     }
     closedir(mydir);
