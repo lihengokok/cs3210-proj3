@@ -63,7 +63,8 @@ void fillBuffer(time_t start, time_t end, struct tnode* rootNode, void* buf, fus
 	last = lastPic(end, rootNode);
 	if(first != NULL && last != NULL)
 	{
-		log_msg("\nstart and end good\n");
+		log_msg("\nStart Name: %s\n", ((struct t_snapshot*)(first->data))->name);
+		log_msg("\nEnd Name: %s\n", ((struct t_snapshot*)(last->data))->name);
 		traverseAndFillBuffer(first, last, buf, filler);
 	}
 }
@@ -75,7 +76,8 @@ void traverseAndFillBuffer(struct tnode *start, struct tnode *end, void* buf, fu
 	int keepGoing = 1;
 	current = start;
 	filler(buf, ((struct t_snapshot*)(start->data))->name, NULL, 0);
-	traverseInOrderFillBuffer(start->right, end, buf, filler);
+	if(start == end) return;
+	if(traverseInOrderFillBuffer(start->right, end, buf, filler) == 1) return;
 	while(keepGoing == 1)
 	{
 		parent = current->parent;
@@ -92,6 +94,7 @@ void traverseAndFillBuffer(struct tnode *start, struct tnode *end, void* buf, fu
 			if(traverseInOrderFillBuffer(parent->right, end, buf, filler) == 1)
 				return;
 		}
+		current = parent;
 	}
 }
 
@@ -121,56 +124,77 @@ void snapshotPrint(void* a)
 	struct t_snapshot *snap;
 	snap = a;
 	printf("%s\n", snap->name);
+	/*if(snap->parent != NULL)
+		printf("Parent: %s\n", snap->parent->name);
+	if(snap->left != NULL)
+		printf("Left: %s\n", snap->left->name);
+	if(snap->right != NULL)
+		printf("Right: %s\n", snap->right->name);*/
 }
 
 
 /* insert a tnode into the binary tree */
 struct tnode *tnode_insert(struct tnode *p, void* value, comparator compFunc) {
- struct tnode *tmp_one = NULL;
- struct tnode *tmp_two = NULL;
+	struct tnode *tmp_one = NULL;
+	struct tnode *tmp_two = NULL;
 
- if(p == NULL) {
-  /* insert [new] tnode as root node */
-  p = (struct tnode *)malloc(sizeof(struct tnode));
-  p->data = value;
-  p->left = p->right = p->parent = NULL;
- } else {
-  tmp_one = p;
-  /* Traverse the tree to get a pointer to the specific tnode */
-  /* The child of this tnode will be the [new] tnode */
-  while(tmp_one != NULL) {
-   tmp_two = tmp_one;
-   if(compFunc(tmp_one ->data, value) > 0)
-    tmp_one = tmp_one->left;
-   else
-    tmp_one = tmp_one->right;
-  }
+	if(p == NULL) {
+		/* insert [new] tnode as root node */
+		p = (struct tnode *)malloc(sizeof(struct tnode));
+		p->data = value;
+		p->left = p->right = p->parent = NULL;
+	}
+	else
+	{
+		tmp_one = p;
+		/* Traverse the tree to get a pointer to the specific tnode */
+		/* The child of this tnode will be the [new] tnode */
+		while(tmp_one != NULL) {
+			tmp_two = tmp_one;
+			if(compFunc(tmp_one ->data, value) > 0)
+				tmp_one = tmp_one->left;
+			else
+				tmp_one = tmp_one->right;
+		}
 
-  if(compFunc(tmp_two ->data, value) > 0) {
-   /* insert [new] tnode as left child */
-   tmp_two->left = (struct tnode *)malloc(sizeof(struct tnode));
-   tmp_two->left->parent = tmp_two->left;
-   tmp_two = tmp_two->left;
-   tmp_two->data = value;
-   tmp_two->left = tmp_two->right = NULL;
-  } else {
-   /* insert [new] tnode as left child */
-   tmp_two->right = (struct tnode *)malloc(sizeof(struct tnode)); 
-   tmp_two->right->parent = tmp_two->right;
-   tmp_two = tmp_two->right;
-   tmp_two->data = value;
-   tmp_two->left = tmp_two->right = NULL;
-  }
- }
+		if(compFunc(tmp_two ->data, value) > 0) {
+			/* insert [new] tnode as left child */
+			tmp_two->left = (struct tnode *)malloc(sizeof(struct tnode));
+			tmp_two->left->parent = tmp_two;
+			tmp_two = tmp_two->left;
+			tmp_two->data = value;
+			tmp_two->left = tmp_two->right = NULL;
+		} else {
+			/* insert [new] tnode as left child */
+			tmp_two->right = (struct tnode *)malloc(sizeof(struct tnode)); 
+			tmp_two->right->parent = tmp_two;
+			tmp_two = tmp_two->right;
+			tmp_two->data = value;
+			tmp_two->left = tmp_two->right = NULL;
+		}
+	}
 
- return(p);
+	return(p);
 }
 
 /* print binary tree inorder */
 void print_inorder(struct tnode *p, printer printFunc) {
  if(p != NULL) {
   print_inorder(p->left, printFunc);
+  printf("Node: \n");
   printFunc( p->data);
+  if(p->parent != NULL) {
+		printf("Parent: \n");
+		printFunc(p->parent->data);
+	}
+  if(p->left != NULL) {
+		printf("Left: \n");
+		printFunc(p->left->data);
+	}
+  if(p->right != NULL) {
+		printf("Right: \n");
+		printFunc(p->right->data);
+	}
   print_inorder(p->right, printFunc);
  }
 }
