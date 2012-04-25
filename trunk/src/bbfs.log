@@ -1,7 +1,7 @@
 
 bb_init()
 
-bb_getattr(path="/.Trash", statbuf=0xb702f1d0)
+bb_getattr(path="/.Trash", statbuf=0xb77d31d0)
 
 Indiced Diff: 6
 
@@ -23,12 +23,12 @@ Fixed Path: /.Trash/, Year: 0, Month: 0, Day: 0
     st_mtime = 0x00000000
     st_ctime = 0x00000000
 
-bb_getattr(path="/.Trash-1000", statbuf=0xb78521d0)
+bb_getattr(path="/.Trash-1000", statbuf=0xb77d31d0)
 
 Indiced Diff: 11
 
 Fixed Path: /.Trash-1000/, Year: 0, Month: 0, Day: 0
-	ERROR bb_getattr lstat: Success
+	ERROR bb_getattr lstat: No such file or directory
 	bb_fullpath:  rootdir = "/home/andrew/source", path = "/.Trash-1000", fpath = "/home/andrew/source/.Trash-1000"
 	ERROR bb_getattr lstat: No such file or directory
     st_dev = 0
@@ -45,7 +45,37 @@ Fixed Path: /.Trash-1000/, Year: 0, Month: 0, Day: 0
     st_mtime = 0x00000000
     st_ctime = 0x00000000
 
-bb_getattr(path="/.xdg-volume-info", statbuf=0xb702f1d0)
+Indiced Diff: 0
+
+Fixed Path: //, Year: 0, Month: 0, Day: 0
+	ERROR bb_getattr lstat: No such file or directory
+
+bb_opendir(path="/", fi=0xb77d3200)
+	bb_fullpath:  rootdir = "/home/andrew/source", path = "/", fpath = "/home/andrew/source/"
+    flags = 0x00098800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x000000000867bc40
+    lock_owner = 0x0000000000000000
+
+Indiced Diff: 0
+
+Fixed Path: //, Year: 0, Month: 0, Day: 0
+	ERROR bb_getattr lstat: Success
+
+bb_opendir(path="/", fi=0xb6fb0200)
+	bb_fullpath:  rootdir = "/home/andrew/source", path = "/", fpath = "/home/andrew/source/"
+    flags = 0x00098800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000008683c60
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/.xdg-volume-info", statbuf=0xb77d31d0)
 
 Indiced Diff: 16
 
@@ -67,7 +97,315 @@ Fixed Path: /.xdg-volume-info/, Year: 0, Month: 0, Day: 0
     st_mtime = 0x00000000
     st_ctime = 0x00000000
 
-bb_getattr(path="/autorun.inf", statbuf=0xb78521d0)
+bb_getattr(path="/autorun.inf", statbuf=0xb6fb01d0)
+
+Indiced Diff: 11
+
+Fixed Path: /autorun.inf/, Year: 0, Month: 0, Day: 0
+	ERROR bb_getattr lstat: Success
+	bb_fullpath:  rootdir = "/home/andrew/source", path = "/autorun.inf", fpath = "/home/andrew/source/autorun.inf"
+	ERROR bb_getattr lstat: No such file or directory
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+Indiced Diff: 0
+
+Fixed Path: //, Year: 0, Month: 0, Day: 0
+	ERROR BB dir doesn't exist: No such file or directory
+
+bb_readdir(path="/", buf=0x086582a8, filler=0x00d6bd60, offset=0, fi=0xb77d31f0)
+calling filler with name travel_0011.jpg
+calling filler with name travel_0012.jpg
+calling filler with name Devos_SLT.html
+calling filler with name cover.jpg
+calling filler with name index.html
+calling filler with name .
+calling filler with name ..
+calling filler with name Andrew Martin resume.txt
+    flags = 0x00000000
+    fh_old = 0x08683c60
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000008683c60
+    lock_owner = 0x0000000000000000
+
+bb_releasedir(path="/", fi=0xb77d3200)
+    flags = 0x00000000
+    fh_old = 0x08683c60
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000008683c60
+    lock_owner = 0x0000000000000000
+
+Indiced Diff: 0
+
+Fixed Path: //, Year: 0, Month: 0, Day: 0
+	ERROR bb_getattr lstat: No such file or directory
+
+bb_opendir(path="/", fi=0xb77d3200)
+	bb_fullpath:  rootdir = "/home/andrew/source", path = "/", fpath = "/home/andrew/source/"
+    flags = 0x00098800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000008683c60
+    lock_owner = 0x0000000000000000
+
+Indiced Diff: 0
+
+Fixed Path: //, Year: 0, Month: 0, Day: 0
+	ERROR bb_getattr lstat: No such file or directory
+
+bb_opendir(path="/", fi=0xb6fb0200)
+	bb_fullpath:  rootdir = "/home/andrew/source", path = "/", fpath = "/home/andrew/source/"
+    flags = 0x00098800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x000000000868bc80
+    lock_owner = 0x0000000000000000
+
+Indiced Diff: 0
+
+Fixed Path: //, Year: 0, Month: 0, Day: 0
+	ERROR bb_getattr lstat: No such file or directory
+
+bb_opendir(path="/", fi=0xb77d3200)
+	bb_fullpath:  rootdir = "/home/andrew/source", path = "/", fpath = "/home/andrew/source/"
+    flags = 0x00098800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000008693ca0
+    lock_owner = 0x0000000000000000
+
+Indiced Diff: 0
+
+Fixed Path: //, Year: 0, Month: 0, Day: 0
+	ERROR bb_getattr lstat: No such file or directory
+
+bb_opendir(path="/", fi=0xb6fb0200)
+	bb_fullpath:  rootdir = "/home/andrew/source", path = "/", fpath = "/home/andrew/source/"
+    flags = 0x00098800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x000000000869bcc0
+    lock_owner = 0x0000000000000000
+
+Indiced Diff: 0
+
+Fixed Path: //, Year: 0, Month: 0, Day: 0
+	ERROR bb_getattr lstat: No such file or directory
+
+bb_opendir(path="/", fi=0xb77d3200)
+	bb_fullpath:  rootdir = "/home/andrew/source", path = "/", fpath = "/home/andrew/source/"
+    flags = 0x00098800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00000000086a3ce0
+    lock_owner = 0x0000000000000000
+
+Indiced Diff: 0
+
+Fixed Path: //, Year: 0, Month: 0, Day: 0
+	ERROR bb_getattr lstat: No such file or directory
+
+bb_opendir(path="/", fi=0xb6fb0200)
+	bb_fullpath:  rootdir = "/home/andrew/source", path = "/", fpath = "/home/andrew/source/"
+    flags = 0x00098800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00000000086abd00
+    lock_owner = 0x0000000000000000
+
+Indiced Diff: 0
+
+Fixed Path: //, Year: 0, Month: 0, Day: 0
+	ERROR bb_getattr lstat: No such file or directory
+
+bb_opendir(path="/", fi=0xb77d3200)
+	bb_fullpath:  rootdir = "/home/andrew/source", path = "/", fpath = "/home/andrew/source/"
+    flags = 0x00098800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00000000086b3d20
+    lock_owner = 0x0000000000000000
+
+Indiced Diff: 0
+
+Fixed Path: //, Year: 0, Month: 0, Day: 0
+	ERROR bb_getattr lstat: No such file or directory
+
+bb_opendir(path="/", fi=0xb6fb0200)
+	bb_fullpath:  rootdir = "/home/andrew/source", path = "/", fpath = "/home/andrew/source/"
+    flags = 0x00098800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00000000086bbd40
+    lock_owner = 0x0000000000000000
+
+Indiced Diff: 0
+
+Fixed Path: //, Year: 0, Month: 0, Day: 0
+	ERROR bb_getattr lstat: No such file or directory
+
+bb_opendir(path="/", fi=0xb77d3200)
+	bb_fullpath:  rootdir = "/home/andrew/source", path = "/", fpath = "/home/andrew/source/"
+    flags = 0x00098800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00000000086c3d60
+    lock_owner = 0x0000000000000000
+
+Indiced Diff: 0
+
+Fixed Path: //, Year: 0, Month: 0, Day: 0
+	ERROR bb_getattr lstat: No such file or directory
+
+bb_opendir(path="/", fi=0xb6fb0200)
+	bb_fullpath:  rootdir = "/home/andrew/source", path = "/", fpath = "/home/andrew/source/"
+    flags = 0x00098800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00000000086cbd80
+    lock_owner = 0x0000000000000000
+
+Indiced Diff: 0
+
+Fixed Path: //, Year: 0, Month: 0, Day: 0
+	ERROR bb_getattr lstat: No such file or directory
+
+bb_opendir(path="/", fi=0xb77d3200)
+	bb_fullpath:  rootdir = "/home/andrew/source", path = "/", fpath = "/home/andrew/source/"
+    flags = 0x00098800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00000000086d3da0
+    lock_owner = 0x0000000000000000
+
+Indiced Diff: 0
+
+Fixed Path: //, Year: 0, Month: 0, Day: 0
+	ERROR bb_getattr lstat: No such file or directory
+
+bb_opendir(path="/", fi=0xb6fb0200)
+	bb_fullpath:  rootdir = "/home/andrew/source", path = "/", fpath = "/home/andrew/source/"
+    flags = 0x00098800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00000000086dbdc0
+    lock_owner = 0x0000000000000000
+
+Indiced Diff: 0
+
+Fixed Path: //, Year: 0, Month: 0, Day: 0
+	ERROR bb_getattr lstat: No such file or directory
+
+bb_opendir(path="/", fi=0xb77d3200)
+	bb_fullpath:  rootdir = "/home/andrew/source", path = "/", fpath = "/home/andrew/source/"
+    flags = 0x00098800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00000000086e3de0
+    lock_owner = 0x0000000000000000
+
+Indiced Diff: 0
+
+Fixed Path: //, Year: 0, Month: 0, Day: 0
+	ERROR bb_getattr lstat: No such file or directory
+
+bb_opendir(path="/", fi=0xb6fb0200)
+	bb_fullpath:  rootdir = "/home/andrew/source", path = "/", fpath = "/home/andrew/source/"
+    flags = 0x00098800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00000000086ebe00
+    lock_owner = 0x0000000000000000
+
+Indiced Diff: 0
+
+Fixed Path: //, Year: 0, Month: 0, Day: 0
+	ERROR bb_getattr lstat: No such file or directory
+
+bb_opendir(path="/", fi=0xb77d3200)
+	bb_fullpath:  rootdir = "/home/andrew/source", path = "/", fpath = "/home/andrew/source/"
+    flags = 0x00098800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00000000086f3e20
+    lock_owner = 0x0000000000000000
+
+Indiced Diff: 0
+
+Fixed Path: //, Year: 0, Month: 0, Day: 0
+	ERROR bb_getattr lstat: No such file or directory
+
+bb_opendir(path="/", fi=0xb6fb0200)
+	bb_fullpath:  rootdir = "/home/andrew/source", path = "/", fpath = "/home/andrew/source/"
+    flags = 0x00098800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x00000000086fbe40
+    lock_owner = 0x0000000000000000
+
+Indiced Diff: 0
+
+Fixed Path: //, Year: 0, Month: 0, Day: 0
+	ERROR bb_getattr lstat: No such file or directory
+
+bb_opendir(path="/", fi=0xb77d3200)
+	bb_fullpath:  rootdir = "/home/andrew/source", path = "/", fpath = "/home/andrew/source/"
+    flags = 0x00098800
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000008703e60
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/autorun.inf", statbuf=0xb6fb01d0)
 
 Indiced Diff: 11
 
@@ -89,314 +427,7 @@ Fixed Path: /autorun.inf/, Year: 0, Month: 0, Day: 0
     st_mtime = 0x00000000
     st_ctime = 0x00000000
 
-Indiced Diff: 0
-
-Fixed Path: //, Year: 0, Month: 0, Day: 0
-	ERROR bb_getattr lstat: No such file or directory
-
-bb_opendir(path="/", fi=0xb702f200)
-	bb_fullpath:  rootdir = "/home/andrew/source", path = "/", fpath = "/home/andrew/source/"
-    flags = 0x00098800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00000000089ceab0
-    lock_owner = 0x0000000000000000
-
-Indiced Diff: 0
-
-Fixed Path: //, Year: 0, Month: 0, Day: 0
-	ERROR bb_getattr lstat: No such file or directory
-
-bb_opendir(path="/", fi=0xb7852200)
-	bb_fullpath:  rootdir = "/home/andrew/source", path = "/", fpath = "/home/andrew/source/"
-    flags = 0x00098800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00000000089d6ad0
-    lock_owner = 0x0000000000000000
-
-Indiced Diff: 0
-
-Fixed Path: //, Year: 0, Month: 0, Day: 0
-	ERROR bb_getattr lstat: No such file or directory
-
-bb_opendir(path="/", fi=0xb702f200)
-	bb_fullpath:  rootdir = "/home/andrew/source", path = "/", fpath = "/home/andrew/source/"
-    flags = 0x00098800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00000000089deaf0
-    lock_owner = 0x0000000000000000
-
-Indiced Diff: 0
-
-Fixed Path: //, Year: 0, Month: 0, Day: 0
-	ERROR bb_getattr lstat: No such file or directory
-
-bb_opendir(path="/", fi=0xb7852200)
-	bb_fullpath:  rootdir = "/home/andrew/source", path = "/", fpath = "/home/andrew/source/"
-    flags = 0x00098800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00000000089e6b10
-    lock_owner = 0x0000000000000000
-
-Indiced Diff: 0
-
-Fixed Path: //, Year: 0, Month: 0, Day: 0
-	ERROR bb_getattr lstat: No such file or directory
-
-bb_opendir(path="/", fi=0xb702f200)
-	bb_fullpath:  rootdir = "/home/andrew/source", path = "/", fpath = "/home/andrew/source/"
-    flags = 0x00098800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00000000089eeb30
-    lock_owner = 0x0000000000000000
-
-Indiced Diff: 0
-
-Fixed Path: //, Year: 0, Month: 0, Day: 0
-	ERROR bb_getattr lstat: No such file or directory
-
-bb_opendir(path="/", fi=0xb7852200)
-	bb_fullpath:  rootdir = "/home/andrew/source", path = "/", fpath = "/home/andrew/source/"
-    flags = 0x00098800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00000000089f6b50
-    lock_owner = 0x0000000000000000
-
-Indiced Diff: 0
-
-Fixed Path: //, Year: 0, Month: 0, Day: 0
-	ERROR bb_getattr lstat: No such file or directory
-
-bb_opendir(path="/", fi=0xb702f200)
-	bb_fullpath:  rootdir = "/home/andrew/source", path = "/", fpath = "/home/andrew/source/"
-    flags = 0x00098800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x00000000089feb70
-    lock_owner = 0x0000000000000000
-
-Indiced Diff: 0
-
-Fixed Path: //, Year: 0, Month: 0, Day: 0
-	ERROR bb_getattr lstat: No such file or directory
-
-bb_opendir(path="/", fi=0xb7852200)
-	bb_fullpath:  rootdir = "/home/andrew/source", path = "/", fpath = "/home/andrew/source/"
-    flags = 0x00098800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x0000000008a06b90
-    lock_owner = 0x0000000000000000
-
-Indiced Diff: 0
-
-Fixed Path: //, Year: 0, Month: 0, Day: 0
-	ERROR bb_getattr lstat: No such file or directory
-
-bb_opendir(path="/", fi=0xb702f200)
-	bb_fullpath:  rootdir = "/home/andrew/source", path = "/", fpath = "/home/andrew/source/"
-    flags = 0x00098800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x0000000008a0ebb0
-    lock_owner = 0x0000000000000000
-
-Indiced Diff: 0
-
-Fixed Path: //, Year: 0, Month: 0, Day: 0
-	ERROR bb_getattr lstat: No such file or directory
-
-bb_opendir(path="/", fi=0xb7852200)
-	bb_fullpath:  rootdir = "/home/andrew/source", path = "/", fpath = "/home/andrew/source/"
-    flags = 0x00098800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x0000000008a16bd0
-    lock_owner = 0x0000000000000000
-
-Indiced Diff: 0
-
-Fixed Path: //, Year: 0, Month: 0, Day: 0
-	ERROR bb_getattr lstat: No such file or directory
-
-bb_opendir(path="/", fi=0xb702f200)
-	bb_fullpath:  rootdir = "/home/andrew/source", path = "/", fpath = "/home/andrew/source/"
-    flags = 0x00098800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x0000000008a1ebf0
-    lock_owner = 0x0000000000000000
-
-Indiced Diff: 0
-
-Fixed Path: //, Year: 0, Month: 0, Day: 0
-	ERROR bb_getattr lstat: No such file or directory
-
-bb_opendir(path="/", fi=0xb7852200)
-	bb_fullpath:  rootdir = "/home/andrew/source", path = "/", fpath = "/home/andrew/source/"
-    flags = 0x00098800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x0000000008a26c10
-    lock_owner = 0x0000000000000000
-
-Indiced Diff: 0
-
-Fixed Path: //, Year: 0, Month: 0, Day: 0
-	ERROR bb_getattr lstat: No such file or directory
-
-bb_opendir(path="/", fi=0xb702f200)
-	bb_fullpath:  rootdir = "/home/andrew/source", path = "/", fpath = "/home/andrew/source/"
-    flags = 0x00098800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x0000000008a2ec30
-    lock_owner = 0x0000000000000000
-
-Indiced Diff: 0
-
-Fixed Path: //, Year: 0, Month: 0, Day: 0
-	ERROR bb_getattr lstat: No such file or directory
-
-bb_opendir(path="/", fi=0xb7852200)
-	bb_fullpath:  rootdir = "/home/andrew/source", path = "/", fpath = "/home/andrew/source/"
-    flags = 0x00098800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x0000000008a36c50
-    lock_owner = 0x0000000000000000
-
-Indiced Diff: 0
-
-Fixed Path: //, Year: 0, Month: 0, Day: 0
-	ERROR bb_getattr lstat: No such file or directory
-
-bb_opendir(path="/", fi=0xb702f200)
-	bb_fullpath:  rootdir = "/home/andrew/source", path = "/", fpath = "/home/andrew/source/"
-    flags = 0x00098800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x0000000008a3ec70
-    lock_owner = 0x0000000000000000
-
-Indiced Diff: 0
-
-Fixed Path: //, Year: 0, Month: 0, Day: 0
-	ERROR bb_getattr lstat: No such file or directory
-
-bb_opendir(path="/", fi=0xb7852200)
-	bb_fullpath:  rootdir = "/home/andrew/source", path = "/", fpath = "/home/andrew/source/"
-    flags = 0x00098800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x0000000008a46c90
-    lock_owner = 0x0000000000000000
-
-Indiced Diff: 0
-
-Fixed Path: //, Year: 0, Month: 0, Day: 0
-	ERROR bb_getattr lstat: No such file or directory
-
-bb_opendir(path="/", fi=0xb702f200)
-	bb_fullpath:  rootdir = "/home/andrew/source", path = "/", fpath = "/home/andrew/source/"
-    flags = 0x00098800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x0000000008a4ecb0
-    lock_owner = 0x0000000000000000
-
-Indiced Diff: 0
-
-Fixed Path: //, Year: 0, Month: 0, Day: 0
-	ERROR bb_getattr lstat: No such file or directory
-
-bb_opendir(path="/", fi=0xb7852200)
-	bb_fullpath:  rootdir = "/home/andrew/source", path = "/", fpath = "/home/andrew/source/"
-    flags = 0x00098800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x0000000008a56cd0
-    lock_owner = 0x0000000000000000
-
-Indiced Diff: 0
-
-Fixed Path: //, Year: 0, Month: 0, Day: 0
-	ERROR bb_getattr lstat: No such file or directory
-
-bb_opendir(path="/", fi=0xb702f200)
-	bb_fullpath:  rootdir = "/home/andrew/source", path = "/", fpath = "/home/andrew/source/"
-    flags = 0x00098800
-    fh_old = 0x00000000
-    writepage = 0
-    direct_io = 0
-    keep_cache = 0
-    fh = 0x0000000008a5ecf0
-    lock_owner = 0x0000000000000000
-
-bb_getattr(path="/autorun.inf", statbuf=0xb78521d0)
-
-Indiced Diff: 11
-
-Fixed Path: /autorun.inf/, Year: 0, Month: 0, Day: 0
-	ERROR bb_getattr lstat: No such file or directory
-	bb_fullpath:  rootdir = "/home/andrew/source", path = "/autorun.inf", fpath = "/home/andrew/source/autorun.inf"
-	ERROR bb_getattr lstat: No such file or directory
-    st_dev = 0
-    st_ino = 0
-    st_mode = 00
-    st_nlink = 0
-    st_uid = 0
-    st_gid = 0
-    st_rdev = 0
-    st_size = 0
-    st_blksize = 0
-    st_blocks = 0
-    st_atime = 0x00000000
-    st_mtime = 0x00000000
-    st_ctime = 0x00000000
-
-bb_getattr(path="/2012", statbuf=0xb702f1d0)
+bb_getattr(path="/2012", statbuf=0xb77d31d0)
 
 Indiced Diff: 4
 
@@ -406,61 +437,7 @@ Month string:
 
 Fixed Path: /2012/, Year: 112, Month: -1, Day: 0
 
-Indiced Diff: 4
-
-Year is good
-
-Month string: 
-
-Fixed Path: /2012/, Year: 112, Month: -1, Day: 0
-
-Indiced Diff: 4
-
-Year is good
-
-Month string: 
-
-Fixed Path: /2012/, Year: 112, Month: -1, Day: 0
-
-Start Time: 1325394000
-
-End Time: 1357016400
-
-Root node start time 1334952472
-
-start and end good
-
-bb_getattr(path="/2012/jan", statbuf=0xb78521d0)
-
-Indiced Diff: 4
-
-Year is good
-
-Month string: jan
-
-Fixed Path: /2012/jan/, Year: 112, Month: 0, Day: -1
-
-bb_getattr(path="/2012/feb", statbuf=0xb702f1d0)
-
-Indiced Diff: 4
-
-Year is good
-
-Month string: feb
-
-Fixed Path: /2012/feb/, Year: 112, Month: 1, Day: -1
-
-bb_getattr(path="/2012/mar", statbuf=0xb78521d0)
-
-Indiced Diff: 4
-
-Year is good
-
-Month string: mar
-
-Fixed Path: /2012/mar/, Year: 112, Month: 2, Day: -1
-
-bb_getattr(path="/2012/apr", statbuf=0xb702f1d0)
+bb_getattr(path="/2012/apr", statbuf=0xb6fb01d0)
 
 Indiced Diff: 4
 
@@ -470,87 +447,423 @@ Month string: apr
 
 Fixed Path: /2012/apr/, Year: 112, Month: 3, Day: -1
 
-bb_getattr(path="/2012/may", statbuf=0xb78521d0)
+Indiced Diff: 4
+
+Year is good
+
+Month string: apr
+
+Fixed Path: /2012/apr/, Year: 112, Month: 3, Day: -1
 
 Indiced Diff: 4
 
 Year is good
 
-Month string: may
+Month string: apr
 
-Fixed Path: /2012/may/, Year: 112, Month: 4, Day: -1
+Fixed Path: /2012/apr/, Year: 112, Month: 3, Day: -1
+Month: 3, Day: 2
+Month: 3, Day: 3
+Month: 3, Day: 4
+Month: 3, Day: 5
+Month: 3, Day: 6
+Month: 3, Day: 7
+Month: 3, Day: 8
+Month: 3, Day: 9
+Month: 3, Day: 10
+Month: 3, Day: 11
+Month: 3, Day: 12
+Month: 3, Day: 13
+Month: 3, Day: 14
+Month: 3, Day: 15
+Month: 3, Day: 16
+Month: 3, Day: 17
+Month: 3, Day: 18
+Month: 3, Day: 19
+Month: 3, Day: 20
+Month: 3, Day: 21
+Month: 3, Day: 22
+Month: 3, Day: 23
+Month: 3, Day: 24
+Month: 3, Day: 25
+Month: 3, Day: 26
+Month: 3, Day: 27
+Month: 3, Day: 28
+Month: 3, Day: 29
+Month: 3, Day: 30
+Month: 4, Day: 1
+Right Here
+Here
+Right Here
+Here
+Right Here
+Here
+Right Here
+Here
+Right Here
+Here
+Right Here
+Here
+Right Here
+Here
+Right Here
+Here
+Right Here
+Here
+Right Here
+Here
+Right Here
+Here
+Right Here
+Here
+Right Here
+Here
+Right Here
+Here
+Right Here
+Here
+Right Here
+Here
+Right Here
+Here
+Right Here
+Here
+Right Here
+Here
+Right Here
+Here
+Right Here
+Here
+Right Here
+Here
+Right Here
+Here
+Right Here
+Here
+Right Here
+Here
+Right Here
+Here
+Right Here
+Here
+Right Here
+Here
+Right Here
+Here
+Right Here
+Here
 
-bb_getattr(path="/2012/jun", statbuf=0xb702f1d0)
+Start Time: 1333256400
+
+End Time: 1335848400
+
+Root node start time 1327383941
+
+Start Name: /home/andrew/source/Andrew Martin resume.txt
+
+End Name: /home/andrew/source/Devos_SLT.html
+
+bb_getattr(path="/2012/apr/01", statbuf=0xb77d31d0)
 
 Indiced Diff: 4
 
 Year is good
 
-Month string: jun
+Month string: apr
 
-Fixed Path: /2012/jun/, Year: 112, Month: 5, Day: -1
+Fixed Path: /2012/apr/01/, Year: 112, Month: 3, Day: 1
 
-bb_getattr(path="/2012/jul", statbuf=0xb78521d0)
-
-Indiced Diff: 4
-
-Year is good
-
-Month string: jul
-
-Fixed Path: /2012/jul/, Year: 112, Month: 6, Day: -1
-
-bb_getattr(path="/2012/aug", statbuf=0xb702f1d0)
+bb_getattr(path="/2012/apr/02", statbuf=0xb6fb01d0)
 
 Indiced Diff: 4
 
 Year is good
 
-Month string: aug
+Month string: apr
 
-Fixed Path: /2012/aug/, Year: 112, Month: 7, Day: -1
+Fixed Path: /2012/apr/02/, Year: 112, Month: 3, Day: 2
 
-bb_getattr(path="/2012/sep", statbuf=0xb78521d0)
-
-Indiced Diff: 4
-
-Year is good
-
-Month string: sep
-
-Fixed Path: /2012/sep/, Year: 112, Month: 8, Day: -1
-
-bb_getattr(path="/2012/oct", statbuf=0xb702f1d0)
+bb_getattr(path="/2012/apr/03", statbuf=0xb77d31d0)
 
 Indiced Diff: 4
 
 Year is good
 
-Month string: oct
+Month string: apr
 
-Fixed Path: /2012/oct/, Year: 112, Month: 9, Day: -1
+Fixed Path: /2012/apr/03/, Year: 112, Month: 3, Day: 3
 
-bb_getattr(path="/2012/nov", statbuf=0xb78521d0)
-
-Indiced Diff: 4
-
-Year is good
-
-Month string: nov
-
-Fixed Path: /2012/nov/, Year: 112, Month: 10, Day: -1
-
-bb_getattr(path="/2012/dec", statbuf=0xb702f1d0)
+bb_getattr(path="/2012/apr/04", statbuf=0xb6fb01d0)
 
 Indiced Diff: 4
 
 Year is good
 
-Month string: dec
+Month string: apr
 
-Fixed Path: /2012/dec/, Year: 112, Month: 11, Day: -1
+Fixed Path: /2012/apr/04/, Year: 112, Month: 3, Day: 4
 
-bb_releasedir(path="/2012", fi=0xb702f200)
+bb_getattr(path="/2012/apr/05", statbuf=0xb77d31d0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: apr
+
+Fixed Path: /2012/apr/05/, Year: 112, Month: 3, Day: 5
+
+bb_getattr(path="/2012/apr/06", statbuf=0xb6fb01d0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: apr
+
+Fixed Path: /2012/apr/06/, Year: 112, Month: 3, Day: 6
+
+bb_getattr(path="/2012/apr/07", statbuf=0xb77d31d0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: apr
+
+Fixed Path: /2012/apr/07/, Year: 112, Month: 3, Day: 7
+
+bb_getattr(path="/2012/apr/08", statbuf=0xb6fb01d0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: apr
+
+Fixed Path: /2012/apr/08/, Year: 112, Month: 3, Day: 8
+
+bb_getattr(path="/2012/apr/09", statbuf=0xb77d31d0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: apr
+
+Fixed Path: /2012/apr/09/, Year: 112, Month: 3, Day: 9
+
+bb_getattr(path="/2012/apr/10", statbuf=0xb6fb01d0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: apr
+
+Fixed Path: /2012/apr/10/, Year: 112, Month: 3, Day: 10
+
+bb_getattr(path="/2012/apr/11", statbuf=0xb77d31d0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: apr
+
+Fixed Path: /2012/apr/11/, Year: 112, Month: 3, Day: 11
+
+bb_getattr(path="/2012/apr/12", statbuf=0xb6fb01d0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: apr
+
+Fixed Path: /2012/apr/12/, Year: 112, Month: 3, Day: 12
+
+bb_getattr(path="/2012/apr/13", statbuf=0xb77d31d0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: apr
+
+Fixed Path: /2012/apr/13/, Year: 112, Month: 3, Day: 13
+
+bb_getattr(path="/2012/apr/14", statbuf=0xb6fb01d0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: apr
+
+Fixed Path: /2012/apr/14/, Year: 112, Month: 3, Day: 14
+
+bb_getattr(path="/2012/apr/15", statbuf=0xb77d31d0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: apr
+
+Fixed Path: /2012/apr/15/, Year: 112, Month: 3, Day: 15
+
+bb_getattr(path="/2012/apr/16", statbuf=0xb6fb01d0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: apr
+
+Fixed Path: /2012/apr/16/, Year: 112, Month: 3, Day: 16
+
+bb_getattr(path="/2012/apr/17", statbuf=0xb77d31d0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: apr
+
+Fixed Path: /2012/apr/17/, Year: 112, Month: 3, Day: 17
+
+bb_getattr(path="/2012/apr/18", statbuf=0xb6fb01d0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: apr
+
+Fixed Path: /2012/apr/18/, Year: 112, Month: 3, Day: 18
+
+bb_getattr(path="/2012/apr/19", statbuf=0xb77d31d0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: apr
+
+Fixed Path: /2012/apr/19/, Year: 112, Month: 3, Day: 19
+
+bb_getattr(path="/2012/apr/20", statbuf=0xb6fb01d0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: apr
+
+Fixed Path: /2012/apr/20/, Year: 112, Month: 3, Day: 20
+
+bb_getattr(path="/2012/apr/21", statbuf=0xb77d31d0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: apr
+
+Fixed Path: /2012/apr/21/, Year: 112, Month: 3, Day: 21
+
+bb_getattr(path="/2012/apr/22", statbuf=0xb6fb01d0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: apr
+
+Fixed Path: /2012/apr/22/, Year: 112, Month: 3, Day: 22
+
+bb_getattr(path="/2012/apr/23", statbuf=0xb77d31d0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: apr
+
+Fixed Path: /2012/apr/23/, Year: 112, Month: 3, Day: 23
+
+bb_getattr(path="/2012/apr/24", statbuf=0xb6fb01d0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: apr
+
+Fixed Path: /2012/apr/24/, Year: 112, Month: 3, Day: 24
+
+bb_getattr(path="/2012/apr/25", statbuf=0xb77d31d0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: apr
+
+Fixed Path: /2012/apr/25/, Year: 112, Month: 3, Day: 25
+
+bb_getattr(path="/2012/apr/26", statbuf=0xb6fb01d0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: apr
+
+Fixed Path: /2012/apr/26/, Year: 112, Month: 3, Day: 26
+
+bb_getattr(path="/2012/apr/27", statbuf=0xb77d31d0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: apr
+
+Fixed Path: /2012/apr/27/, Year: 112, Month: 3, Day: 27
+
+bb_getattr(path="/2012/apr/28", statbuf=0xb6fb01d0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: apr
+
+Fixed Path: /2012/apr/28/, Year: 112, Month: 3, Day: 28
+
+bb_getattr(path="/2012/apr/29", statbuf=0xb77d31d0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: apr
+
+Fixed Path: /2012/apr/29/, Year: 112, Month: 3, Day: 29
+
+bb_getattr(path="/2012/apr/30", statbuf=0xb6fb01d0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: apr
+
+Fixed Path: /2012/apr/30/, Year: 112, Month: 3, Day: 30
+
+bb_releasedir(path="/2012/apr", fi=0xb6fb0200)
     flags = 0x00000000
     fh_old = 0x00000000
     writepage = 0
@@ -559,7 +872,7 @@ bb_releasedir(path="/2012", fi=0xb702f200)
     fh = 0x0000000000000000
     lock_owner = 0x0000000000000000
 
-bb_getattr(path="/2011", statbuf=0xb78521d0)
+bb_getattr(path="/2011", statbuf=0xb77d31d0)
 
 Indiced Diff: 4
 
@@ -589,9 +902,13 @@ Start Time: 1293858000
 
 End Time: 1325394000
 
-Root node start time 1334952472
+Root node start time 1327383941
 
-bb_getattr(path="/2011/jan", statbuf=0xb702f1d0)
+Start Name: /home/andrew/source/index.html
+
+End Name: /home/andrew/source/index.html
+
+bb_getattr(path="/2011/jan", statbuf=0xb6fb01d0)
 
 Indiced Diff: 4
 
@@ -601,7 +918,7 @@ Month string: jan
 
 Fixed Path: /2011/jan/, Year: 111, Month: 0, Day: -1
 
-bb_getattr(path="/2011/feb", statbuf=0xb78521d0)
+bb_getattr(path="/2011/feb", statbuf=0xb77d31d0)
 
 Indiced Diff: 4
 
@@ -611,7 +928,7 @@ Month string: feb
 
 Fixed Path: /2011/feb/, Year: 111, Month: 1, Day: -1
 
-bb_getattr(path="/2011/mar", statbuf=0xb702f1d0)
+bb_getattr(path="/2011/mar", statbuf=0xb6fb01d0)
 
 Indiced Diff: 4
 
@@ -621,7 +938,7 @@ Month string: mar
 
 Fixed Path: /2011/mar/, Year: 111, Month: 2, Day: -1
 
-bb_getattr(path="/2011/apr", statbuf=0xb78521d0)
+bb_getattr(path="/2011/apr", statbuf=0xb77d31d0)
 
 Indiced Diff: 4
 
@@ -631,7 +948,7 @@ Month string: apr
 
 Fixed Path: /2011/apr/, Year: 111, Month: 3, Day: -1
 
-bb_getattr(path="/2011/may", statbuf=0xb702f1d0)
+bb_getattr(path="/2011/may", statbuf=0xb6fb01d0)
 
 Indiced Diff: 4
 
@@ -641,7 +958,7 @@ Month string: may
 
 Fixed Path: /2011/may/, Year: 111, Month: 4, Day: -1
 
-bb_getattr(path="/2011/jun", statbuf=0xb78521d0)
+bb_getattr(path="/2011/jun", statbuf=0xb77d31d0)
 
 Indiced Diff: 4
 
@@ -651,7 +968,7 @@ Month string: jun
 
 Fixed Path: /2011/jun/, Year: 111, Month: 5, Day: -1
 
-bb_getattr(path="/2011/jul", statbuf=0xb702f1d0)
+bb_getattr(path="/2011/jul", statbuf=0xb6fb01d0)
 
 Indiced Diff: 4
 
@@ -661,7 +978,7 @@ Month string: jul
 
 Fixed Path: /2011/jul/, Year: 111, Month: 6, Day: -1
 
-bb_getattr(path="/2011/aug", statbuf=0xb78521d0)
+bb_getattr(path="/2011/aug", statbuf=0xb77d31d0)
 
 Indiced Diff: 4
 
@@ -671,7 +988,7 @@ Month string: aug
 
 Fixed Path: /2011/aug/, Year: 111, Month: 7, Day: -1
 
-bb_getattr(path="/2011/sep", statbuf=0xb702f1d0)
+bb_getattr(path="/2011/sep", statbuf=0xb6fb01d0)
 
 Indiced Diff: 4
 
@@ -681,7 +998,7 @@ Month string: sep
 
 Fixed Path: /2011/sep/, Year: 111, Month: 8, Day: -1
 
-bb_getattr(path="/2011/oct", statbuf=0xb78521d0)
+bb_getattr(path="/2011/oct", statbuf=0xb77d31d0)
 
 Indiced Diff: 4
 
@@ -691,7 +1008,7 @@ Month string: oct
 
 Fixed Path: /2011/oct/, Year: 111, Month: 9, Day: -1
 
-bb_getattr(path="/2011/nov", statbuf=0xb702f1d0)
+bb_getattr(path="/2011/nov", statbuf=0xb6fb01d0)
 
 Indiced Diff: 4
 
@@ -701,7 +1018,7 @@ Month string: nov
 
 Fixed Path: /2011/nov/, Year: 111, Month: 10, Day: -1
 
-bb_getattr(path="/2011/dec", statbuf=0xb78521d0)
+bb_getattr(path="/2011/dec", statbuf=0xb77d31d0)
 
 Indiced Diff: 4
 
@@ -711,7 +1028,7 @@ Month string: dec
 
 Fixed Path: /2011/dec/, Year: 111, Month: 11, Day: -1
 
-bb_releasedir(path="/2011", fi=0xb7852200)
+bb_releasedir(path="/2011", fi=0xb77d3200)
     flags = 0x00000000
     fh_old = 0x00000000
     writepage = 0

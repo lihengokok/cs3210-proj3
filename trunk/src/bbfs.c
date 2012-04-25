@@ -46,7 +46,7 @@ typedef monthPtr year[12];
 
 struct stat* permissionsFile;
 struct stat* permissionsFolder;
-struct tnode *root;
+struct tnode *root = NULL;
 
 
 //Note: we're also going to populate the time period dirs
@@ -760,11 +760,12 @@ int bb_readdir(const char *path, void *buf, fuse_fill_dir_t filler, off_t offset
 		retstat = bb_error("BB dir doesn't exist");
 	else
 	{
+		time_t start, end;
 		filler(buf, ".", NULL, 0);
 		filler(buf, "..", NULL, 0);
 		if(date.tm_mon == -1) //in this case, only a year was specified
 		{
-			time_t start, end;
+			
 			filler(buf, "jan", NULL, 0);
 			filler(buf, "feb", NULL, 0);
 			filler(buf, "mar", NULL, 0);
@@ -802,6 +803,18 @@ int bb_readdir(const char *path, void *buf, fuse_fill_dir_t filler, off_t offset
 				log_msg("Here\n");
 				filler(buf, asString, NULL, 0);
 			}
+			date.tm_mday = 1;
+			date.tm_hour = 0;
+			date.tm_min = 0;
+			date.tm_sec = 0;
+			start = mktime(&date);
+			date.tm_mon++;
+			end = mktime(&date);
+			log_msg("\nStart Time: %i\n", start);
+			log_msg("\nEnd Time: %i\n", end);
+			
+			fillBuffer(start, end, root, buf, filler);
+			
 		}
 		return 0;
 	}
@@ -1145,8 +1158,13 @@ int main(int argc, char *argv[])
                                      * the loop stops. */
     {
 		createNodeAndAdd(bb_data->rootdir, entry->d_name, &root);
-        //printf("%s\n", entry->d_name);
+        printf("%s\n", entry->d_name);
     }
+    
+	printf("\n");
+    //print all the nodes out to see the tree
+    print_inorder(root, snapshotPrint);
+    
     closedir(mydir);
 
 	argv[i] = argv[i+1];
