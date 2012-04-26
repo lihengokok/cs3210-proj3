@@ -15,7 +15,7 @@ if(curl) {
 	/*curl_easy_setopt(curl, CURLOPT_URL, "https://example.com/");*/
 
 	/* Add the parameters */
-	/*curl_easy_setopt(curl, CURLOPT_POSTFIELDS, data);*/
+	curl_easy_setopt(curl, CURLOPT_POSTFIELDS, data);
 	/* Give it the URL */
 	curl_easy_setopt(curl, CURLOPT_URL, url);
 
@@ -66,12 +66,13 @@ if(curl) {
 int main(void)
 {
 	/*
-	char data[30] = {"user=dh&pw=11111"};
-	char url[100] = {"http://m.cip.gatech.edu/developer/imf/api/RWMSERVER/login"};
+	char data[50] = {"lat=40.680638&desc=New York&lng=-73.959961"};
+	char data[50] = {"lat=39.402244&desc=Maryland&lng=-76.530762"};
+	char data[50] = {"lat=37.879478&desc=Virginia&lng=-77.387695"};
 	*/
-	char data[30] = {""};
+	char data[50] = {"lat=39.740986&desc=New Jersey&lng=-74.750977"};
 	
-	char url[300] = {"http://www.panoramio.com/map/get_panoramas.php?set=6871797&from=0&to=20&minx=-180&miny=-90&maxx=180&maxy=90&size=medium&mapfilter=true"};
+	char url[100] = {"http://m.cip.gatech.edu/developer/imf/api/helper/coord/"};
 	
 	makePOST(url,data);
 	

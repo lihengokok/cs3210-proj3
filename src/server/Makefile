@@ -1,5 +1,5 @@
 auth:
-	gcc auth.c -lcurl -o auth
+	gcc auth.c -lcurl -o saveGPSTag
 	
 clean:
-	rm -f auth *.o
+	rm -f saveGPSTag *.o
