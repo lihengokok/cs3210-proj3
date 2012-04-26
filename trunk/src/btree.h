@@ -70,4 +70,5 @@ void fillBuffer(time_t start, time_t end, struct tnode* rootNode, void* buf, fus
 
 void fillYears(struct tnode *years, void* buf, fuse_fill_dir_t filler);
 void fillMonths(struct tnode *months, void* buf, fuse_fill_dir_t filler);
+void fillDays(struct tnode *days, void* buf, fuse_fill_dir_t filler);
 void logMonths(struct tnode *months);

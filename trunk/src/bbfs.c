@@ -91,15 +91,19 @@ static void addDay(time_t time)
 static void createNodeAndAdd(const char * path, const char * fileName, struct tnode **rootNode)
 {
 	struct t_snapshot* snap;
+	char* fullPath;
 	struct stat *statbuf;
 	statbuf = malloc(sizeof(struct stat));
 	snap = malloc(sizeof(struct t_snapshot));
-	snap->name = malloc(strlen(path) + strlen(fileName) + 2);
-	strcpy(snap->name, path);
-	snap->name[strlen(path)] = '/';
-	strcpy(snap->name + strlen(path) + 1, fileName);
-	snap->name[strlen(path) + strlen(fileName) + 1] = '\0';
-	lstat(snap->name, statbuf);
+	fullPath = malloc(strlen(path) + strlen(fileName) + 2);
+	strcpy(fullPath, path);
+	fullPath[strlen(path)] = '/';
+	strcpy(fullPath + strlen(path) + 1, fileName);
+	fullPath[strlen(path) + strlen(fileName) + 1] = '\0';
+	snap->name = malloc(strlen(fileName) + 1);
+	strcpy(snap->name, fileName);
+	//snap->name[strlen(fileName)] = 
+	lstat(fullPath, statbuf);
 	if(S_ISDIR(statbuf->st_mode))
 	{
 		free(snap->name);
@@ -134,8 +138,10 @@ static int bb_error(char *str)
 //  it.
 static void bb_fullpath(char fpath[PATH_MAX], const char *path)
 {
+	int index = findLast(path, '/');
+	
 	strcpy(fpath, BB_DATA->rootdir);
-	strncat(fpath, path, PATH_MAX); // ridiculously long paths will
+	strncat(fpath, path + index, PATH_MAX); // ridiculously long paths will
 									// break here
 
 	log_msg("\tbb_fullpath:  rootdir = \"%s\", path = \"%s\", fpath = \"%s\"\n",
@@ -156,31 +162,34 @@ static void bb_fullpath(char fpath[PATH_MAX], const char *path)
 int bb_getattr(const char *path, struct stat *statbuf)
 {
 	int retstat = 0;
+	//int index;
 	char fpath[PATH_MAX];
 	struct tm date;
 	
 	log_msg("\nbb_getattr(path=\"%s\", statbuf=0x%08x)\n",
 	  path, statbuf);
-	  
-	  
+	
 	//Note, this is the scenario where it ends in a folder name
 	//If it doesn't, we do something else sneaky
 	date = pathToTmComplete(path);
-	if(isZero(&date))
-	{
-		retstat = bb_error("bb_getattr lstat");
-	}
-	else
-	{
-		*statbuf = *permissionsFolder;
-		return 0;
-	}
-		
+	
 	bb_fullpath(fpath, path);
 	
 	retstat = lstat(fpath, statbuf);
 	if (retstat != 0)
-		retstat = bb_error("bb_getattr lstat");
+	{
+		if(isZero(&date))
+		{
+			retstat = bb_error("bb_getattr lstat");
+		}
+		else
+		{
+			*statbuf = *permissionsFolder;
+			return 0;
+		}
+	}
+		
+	//index = findLast(path, '/');
 	
 	log_stat(statbuf);
 	
@@ -797,6 +806,7 @@ int bb_readdir(const char *path, void *buf, fuse_fill_dir_t filler, off_t offset
 	if(strcmp("/", path) == 0)
 	{
 		fillYears(years, buf, filler);
+		fillBuffer(1, 2000000000, root, buf, filler);
 		return 0;
 	}
 	//Note, this is the scenario where it ends in a folder name
@@ -847,15 +857,21 @@ int bb_readdir(const char *path, void *buf, fuse_fill_dir_t filler, off_t offset
 		}
 		else if(date.tm_mday == -1)
 		{
-			int i;
-			char asString[20];
-			int daysCount = daysInMonth(date);
-			for(i = 1; i <= daysCount; i++)
+			struct year yearData;
+			struct month monthData;
+			struct tnode* yearNode;
+			struct tnode* monthNode;
+			//int i;
+			//char asString[20];
+			//int daysCount = daysInMonth(date);
+			yearData.yearNum = date.tm_year;
+			monthData.monthNum = date.tm_mon;
+			yearNode = tnode_search(years, &yearData, yearsCompare);
+			if(yearNode != NULL)
 			{
-				log_msg("Right Here\n");
-				sprintf(asString, "%02d", i);
-				log_msg("Here\n");
-				filler(buf, asString, NULL, 0);
+				monthNode = tnode_search(((struct year*)(yearNode->data))->months, &monthData, monthsCompare);
+				if(monthNode != NULL)
+					fillDays(((struct month*)(monthNode->data))->days, buf, filler);
 			}
 			date.tm_mday = 1;
 			date.tm_hour = 0;
@@ -869,6 +885,19 @@ int bb_readdir(const char *path, void *buf, fuse_fill_dir_t filler, off_t offset
 			
 			fillBuffer(start, end, root, buf, filler);
 			
+		}
+		else
+		{
+			date.tm_hour = 0;
+			date.tm_min = 0;
+			date.tm_sec = 0;
+			start = mktime(&date);
+			date.tm_mday++;
+			end = mktime(&date);
+			log_msg("\nStart Time: %i\n", start);
+			log_msg("\nEnd Time: %i\n", end);
+			
+			fillBuffer(start, end, root, buf, filler);
 		}
 		return 0;
 	}
@@ -996,7 +1025,7 @@ int bb_access(const char *path, int mask)
 {
 	int retstat = 0;
 	char fpath[PATH_MAX];
-   
+	
 	log_msg("\nbb_access(path=\"%s\", mask=0%o)\n",
 		path, mask);
 	bb_fullpath(fpath, path);
@@ -1004,7 +1033,7 @@ int bb_access(const char *path, int mask)
 	retstat = access(fpath, mask);
 	
 	if (retstat < 0)
-	retstat = bb_error("bb_access access");
+		retstat = bb_error("bb_access access");
 	
 	return retstat;
 }
@@ -1033,7 +1062,8 @@ int bb_create(const char *path, mode_t mode, struct fuse_file_info *fi)
 	
 	fd = creat(fpath, mode);
 	if (fd < 0)
-	retstat = bb_error("bb_create creat");
+		retstat = bb_error("bb_create creat");
+	
 	
 	fi->fh = fd;
 	

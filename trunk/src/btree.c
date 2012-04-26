@@ -82,6 +82,18 @@ void fillYears(struct tnode *years, void* buf, fuse_fill_dir_t filler)
 	
 }
 
+void fillDays(struct tnode *days, void* buf, fuse_fill_dir_t filler)
+{
+	char asString[7];
+	if(days == NULL)
+		return;
+	fillDays(days->left, buf, filler);
+	sprintf(asString, "%02d", ((struct day*)(days->data))->dayNum);
+	filler(buf, asString , NULL, 0);
+	fillDays(days->right, buf, filler);
+	
+}
+
 void logMonths(struct tnode *months)
 {
 	char* asString = malloc(4);
@@ -207,6 +219,7 @@ void traverseAndFillBuffer(struct tnode *start, struct tnode *end, void* buf, fu
 		//otherwise, do this:
 		if(parent->left == current) 
 		{
+			log_msg("traverseAndFillBuffer\n");
 			filler(buf, ((struct t_snapshot*)(parent->data))->name, NULL, 0);
 			if(parent == end)
 				return;
@@ -223,6 +236,7 @@ int traverseInOrderFillBuffer(struct tnode *node, struct tnode *end, void* buf, 
 	{
 		if(traverseInOrderFillBuffer(node->left, end, buf, filler) == 1)
 			return 1;
+		log_msg("traverseInOrderFillBuffer\n");
 		filler(buf, ((struct t_snapshot*)(node->data))->name, NULL, 0);
 		if(node == end)
 			return 1;
