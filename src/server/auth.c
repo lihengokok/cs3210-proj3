@@ -68,10 +68,10 @@ int main(void)
 	/*
 	char data[50] = {"lat=40.680638&desc=New York&lng=-73.959961"};
 	char data[50] = {"lat=39.402244&desc=Maryland&lng=-76.530762"};
-	char data[50] = {"lat=37.879478&desc=Virginia&lng=-77.387695"};
-	*/
 	char data[50] = {"lat=39.740986&desc=New Jersey&lng=-74.750977"};
+	*/
 	
+	char data[50] = {"lat=33.826389&desc=IHOP.jpg&lng=-84.49028"};
 	char url[100] = {"http://m.cip.gatech.edu/developer/imf/api/helper/coord/"};
 	
 	makePOST(url,data);
