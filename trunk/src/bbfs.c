@@ -36,11 +36,14 @@
 #include "date_utils.h"
 #include "log.h"
 #include "btree.h"
+#include <libexif/exif-data.h>
+#include "auth.h"
 
 struct stat* permissionsFile;
 struct stat* permissionsFolder;
 struct tnode *root = NULL;
 static struct tnode *years = NULL;
+char url[100] = "http://m.cip.gatech.edu/developer/imf/api/helper/coord/";
 
 static void addDay(time_t time)
 {
@@ -60,14 +63,14 @@ static void addDay(time_t time)
 	myDay->dayNum = timeTm->tm_mday;
 	if((yearNode = tnode_search(years, myYear, yearsCompare)) == NULL)
 	{
-		printf("Years\n");
+		//printf("Years\n");
 		years = tnode_insert(years, myYear, yearsCompare);
 		yearNode = tnode_search(years, myYear, yearsCompare);
 		yearNode->data = myYear;
 	} else free(myYear);
 	if((monthNode = tnode_search(((struct year*)(yearNode->data))->months, myMonth, monthsCompare)) == NULL)
 	{
-		printf("Months\n");
+		//printf("Months\n");
 		((struct year*)(yearNode->data))->months = tnode_insert(((struct year*)(yearNode->data))->months, myMonth, monthsCompare);
 		monthNode = ((struct year*)(yearNode->data))->months;
 		monthNode = tnode_search(monthNode, myMonth, monthsCompare);
@@ -76,7 +79,7 @@ static void addDay(time_t time)
 	} else free(myMonth);
 	if((dayNode = tnode_search(((struct month*)(monthNode->data))->days, myDay, daysCompare)) == NULL)
 	{
-		printf("Days\n");
+		//printf("Days\n");
 		((struct month*)(monthNode->data))->days = tnode_insert(((struct month*)(monthNode->data))->days, myDay, daysCompare);
 		dayNode = ((struct month*)(monthNode->data))->days;
 		dayNode = tnode_search(dayNode, myDay, daysCompare);
@@ -93,6 +96,8 @@ static void createNodeAndAdd(const char * path, const char * fileName, struct tn
 	struct t_snapshot* snap;
 	char* fullPath;
 	struct stat *statbuf;
+	ExifData *ed;
+
 	statbuf = malloc(sizeof(struct stat));
 	snap = malloc(sizeof(struct t_snapshot));
 	fullPath = malloc(strlen(path) + strlen(fileName) + 2);
@@ -111,11 +116,89 @@ static void createNodeAndAdd(const char * path, const char * fileName, struct tn
 		free(statbuf);
 		return;
 	}
-	//printf("%s\n", snap->name);
-	snap->time = statbuf->st_mtime;
+	
+	//Attempt to grab exif data
+	//printf("Attempting exif read\n");
+	ed = exif_data_new_from_file(fullPath);
+	if (ed)
+	{
+		char *isGood;
+		ExifEntry *entry;
+		struct tm timeTm;
+		int i;
+		char latitude[15];
+		char longitude[15];
+		int flip = 0;
+		
+		//Date tag
+		entry = exif_content_get_entry(ed->ifd[EXIF_IFD_0], EXIF_TAG_DATE_TIME);
+		if(entry != NULL)
+		{
+			isGood = strptime(entry->data, "%Y:%m:%d %H:%M:%S", &timeTm);
+			//printf("Inside exif\n");
+			if (isGood != NULL)
+			{
+				//printf("Successful Exif read\n");
+				//printf("Year: %i\n", timeTm.tm_year);
+				snap->time = mktime(&timeTm);
+			}
+			else
+			{
+				snap->time = statbuf->st_mtime;
+			}
+		}
+		
+		entry = exif_content_get_entry(ed->ifd[EXIF_IFD_GPS], EXIF_TAG_GPS_LATITUDE_REF);
+		if(entry != NULL)
+		{
+			if(strcmp("S", entry->data) == 0)
+				flip = 1;
+		}
+		
+		//Attempting geolaction read
+		entry = exif_content_get_entry(ed->ifd[EXIF_IFD_GPS], EXIF_TAG_GPS_LATITUDE );
+		if(entry != NULL)
+		{
+			//printf("Photo Name: %s\n", fileName);
+			/*for(i = 0; i < 24; i++)
+				printf("Lat: %i\n", *(entry->data + i));*/
+			
+			exifGpsDataToStr(entry->data, latitude, flip);
+			//printf("Latitude: %s\n", latitude);
+		}
+		
+		flip = 0;
+		entry = exif_content_get_entry(ed->ifd[EXIF_IFD_GPS], EXIF_TAG_GPS_LONGITUDE_REF);
+		if(entry != NULL)
+		{
+			if(strcmp("W", entry->data) == 0)
+				flip = 1;
+		}
+		
+		//Attempting geolaction read
+		entry = exif_content_get_entry(ed->ifd[EXIF_IFD_GPS], EXIF_TAG_GPS_LONGITUDE );
+		if(entry != NULL)
+		{
+			//printf("Photo Name: %s\n", fileName);
+			/*for(i = 0; i < 24; i++)
+				printf("Lat: %i\n", *(entry->data + i));*/
+			
+			exifGpsDataToStr(entry->data, longitude, flip);
+			//printf("Latitude: %s\n", longitude);
+			
+			makeEasyPOST(latitude, longitude, fileName, url);
+		}
+		
+	}
+	else
+	{
+		snap->time = statbuf->st_mtime;
+	}
+	exif_data_unref(ed);
+	
 	//printf("%i\n", (int)snap->time);
 	*rootNode = tnode_insert(*rootNode, snap, snapshotComp);
-	addDay(statbuf->st_mtime);
+	addDay(snap->time);
 	free(statbuf);
 }
 
@@ -190,6 +273,44 @@ int bb_getattr(const char *path, struct stat *statbuf)
 	}
 		
 	//index = findLast(path, '/');
+	
+	if(strlen(path + 1) > 12)
+	{
+		char store;
+		char* isGood;
+		char* isGood2;
+		char* path2;
+		struct tm beginTm;
+		struct tm endTm;
+		int dashIndex;
+		path2 = path;
+		dashIndex = findLast(path2 + 1, '-');
+		if(dashIndex > 0)
+		{
+			(path2 + 1)[dashIndex] = '\0';
+			
+			isGood = strptime(path2 + 1, "%Y:%m:%d", &beginTm);
+			log_msg("First part of path: %s\n", path2 + 1);
+			isGood2 = strptime(path2 + 2 + dashIndex, "%Y:%m:%d", &endTm);
+			log_msg("Second part of path: %s\n", path2 + 2 + dashIndex);
+			beginTm.tm_sec = 0;
+			beginTm.tm_min = 0;
+			beginTm.tm_hour = 0;
+			
+			endTm.tm_sec = 0;
+			endTm.tm_min = 0;
+			endTm.tm_hour = 0;
+			
+			if(isGood != NULL && isGood2 != NULL)
+			{
+				*statbuf = *permissionsFolder;
+				return 0;
+			}
+			(path2 + 1)[dashIndex] = '-';
+		}
+		
+	}
+	
 	
 	log_stat(statbuf);
 	
@@ -526,14 +647,19 @@ int bb_write(const char *path, const char *buf, size_t size, off_t offset,
 	int retstat = 0;
 	
 	log_msg("\nbb_write(path=\"%s\", buf=0x%08x, size=%d, offset=%lld, fi=0x%08x)\n",
-		path, buf, size, offset, fi
-		);
+		path, buf, size, offset, fi);
 	// no need to get fpath on this one, since I work from fi->fh not the path
 	log_fi(fi);
 	
 	retstat = pwrite(fi->fh, buf, size, offset);
 	if (retstat < 0)
-	retstat = bb_error("bb_write pwrite");
+		retstat = bb_error("bb_write pwrite");
+		
+	
+	//if (tnode_search(root, ) == NULL)
+	//{
+	
+	//}
 	
 	return retstat;
 }
@@ -743,9 +869,42 @@ int bb_opendir(const char *path, struct fuse_file_info *fi)
 	int retstat = 0;
 	char fpath[PATH_MAX];
 	struct tm date;
-	  
 	if(strcmp("/", path) == 0)
 		return 0;
+	if(strlen(path + 1) > 12)
+	{
+		char store;
+		char* isGood;
+		char* isGood2;
+		char* path2;
+		struct tm beginTm;
+		struct tm endTm;
+		int dashIndex;
+		path2 = path;
+		dashIndex = findLast(path2 + 1, '-');
+		if(dashIndex > 0)
+		{
+			(path2 + 1)[dashIndex] = '\0';
+			
+			isGood = strptime(path2 + 1, "%Y:%m:%d", &beginTm);
+			log_msg("First part of path: %s\n", path2 + 1);
+			isGood2 = strptime(path2 + 2 + dashIndex, "%Y:%m:%d", &endTm);
+			beginTm.tm_sec = 0;
+			beginTm.tm_min = 0;
+			beginTm.tm_hour = 0;
+			
+			endTm.tm_sec = 0;
+			endTm.tm_min = 0;
+			endTm.tm_hour = 0;
+			if(isGood != NULL && isGood2 != NULL)
+			{
+				log_msg("Returning existence\n");
+				return 0;
+			}
+			(path2 + 1)[dashIndex] = '-';
+		}
+		
+	}
 	//Note, this is the scenario where it ends in a folder name
 	//If it doesn't, in this case, it fails
 	date = pathToTmComplete(path);
@@ -809,6 +968,61 @@ int bb_readdir(const char *path, void *buf, fuse_fill_dir_t filler, off_t offset
 		fillBuffer(1, 2000000000, root, buf, filler);
 		return 0;
 	}
+	
+	if(strlen(path + 1) > 12)
+	{
+		char store;
+		char* isGood;
+		char* isGood2;
+		char* path2;
+		struct tm beginTm;
+		struct tm endTm;
+		int dashIndex;
+		path2 = path;
+		dashIndex = findLast(path2 + 1, '-');
+		if(dashIndex > 0)
+		{
+			(path2 + 1)[dashIndex] = '\0';
+			
+			isGood = strptime(path2 + 1, "%Y:%m:%d", &beginTm);
+
+			isGood2 = strptime(path2 + 2 + dashIndex, "%Y:%m:%d", &endTm);
+			
+			log_msg("First part of path: %s\n", path2 + 1);
+			log_msg("seconds after the minute (0 to 61): %d \n",endTm.tm_sec);
+			log_msg("minutes after the hour (0 to 59): %d \n",endTm.tm_min);
+			log_msg("hours since midnight (0 to 23): %d \n",endTm.tm_hour);
+			log_msg("day of the month (1 to 31): %d \n",endTm.tm_mday);
+			log_msg("months since January (0 to 11): %d \n",endTm.tm_mon);
+			log_msg("years since 1900: %d \n",endTm.tm_year);
+			log_msg("days since Sunday (0 to 6 Sunday=0): %d \n",endTm.tm_wday);
+			log_msg("days since January 1 (0 to 365): %d \n",endTm.tm_yday);
+			log_msg("Daylight Savings Time: %d \n",endTm.tm_isdst);
+			
+			log_msg("Second part of path: %s\n", path2 + 2 + dashIndex);
+			beginTm.tm_sec = 0;
+			beginTm.tm_min = 0;
+			beginTm.tm_hour = 0;
+			
+			endTm.tm_sec = 0;
+			endTm.tm_min = 0;
+			endTm.tm_hour = 0;
+			if(isGood != NULL && isGood2 != NULL)
+			{
+				time_t t1, t2;
+				t1 = mktime(&beginTm);
+				t2 = mktime(&endTm);
+				log_msg("Performed search from %i to %i\n", t1, t2);
+				fillBuffer(t1, t2, root, buf, filler);
+				(path2 + 1)[dashIndex] = '-';
+				return 0;
+			}
+			(path2 + 1)[dashIndex] = '-';
+		}
+		
+	}
+	
+	
 	//Note, this is the scenario where it ends in a folder name
 	//If it doesn't, in this case, it fails
 	date = pathToTmComplete(path);
@@ -1069,6 +1283,8 @@ int bb_create(const char *path, mode_t mode, struct fuse_file_info *fi)
 	
 	log_fi(fi);
 	
+	createNodeAndAdd(BB_DATA->rootdir, path + 1, &root);
+	
 	return retstat;
 }
 
@@ -1242,17 +1458,17 @@ int main(int argc, char *argv[])
                                      * the loop stops. */
     {
 		createNodeAndAdd(bb_data->rootdir, entry->d_name, &root);
-        printf("%s\n", entry->d_name);
+        //printf("%s\n", entry->d_name);
     }
     
     //print out the year 2011
-    printf("Years data addr: %i\n", (int)(((struct year*)(years->data))->months));
-    logMonths(((struct year*)(years->data))->months);
+    //printf("Years data addr: %i\n", (int)(((struct year*)(years->data))->months));
+    //logMonths(((struct year*)(years->data))->months);
     
     
 	printf("\n");
     //print all the nodes out to see the tree
-    print_inorder(root, snapshotPrint);
+    //print_inorder(root, snapshotPrint);
     
     closedir(mydir);
 

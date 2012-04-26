@@ -41,7 +41,7 @@ int main(int argc, char **argv)
 	*/
 	
 	isGood = strptime(entry->data, "%Y:%m:%d %H:%M:%S", photo_time);
-	if (isGood = NULL){
+	if (isGood == NULL){
 		printf("Time/date from picture is outside expected format of '2000:09:02 14:30:10' \n The date was %s\n", entry->data);
 	} 
 	printf("Date is %s\n", entry->data);
