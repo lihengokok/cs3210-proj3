@@ -1,8 +1,8 @@
-bbfs : bbfs.o log.o date_utils.o btree.o
-	gcc -g -o bbfs bbfs.o log.o date_utils.o btree.o `pkg-config fuse --libs`
+bbfs : bbfs.o log.o date_utils.o btree.o auth.o
+	gcc -g -o bbfs bbfs.o log.o date_utils.o btree.o auth.o -lexif -lcurl `pkg-config fuse --libs`
 
 bbfs.o : bbfs.c log.h params.h date_utils.h
-	gcc -g -Wall -c bbfs.c `pkg-config fuse --cflags`
+	gcc -g -Wall -c bbfs.c -lexif `pkg-config fuse --cflags`
 
 log.o : log.c log.h params.h
 	gcc -g -Wall -c log.c `pkg-config fuse --cflags`
@@ -12,6 +12,9 @@ date_utils.o : date_utils.c date_utils.h
 	
 btree.o : btree.c btree.h
 	gcc -g -Wall -c btree.c `pkg-config fuse --cflags`
+
+auth.o : auth.c auth.h
+	gcc -g -Wall -c auth.c -lcurl `pkg-config fuse --cflags`
 
 clean:
 	rm -f bbfs *.o

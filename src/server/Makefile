@@ -1,4 +1,4 @@
-auth:
+saveGPSTag:
 	gcc auth.c -lcurl -o saveGPSTag
 	
 clean:
