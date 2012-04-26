@@ -10,7 +10,16 @@
 
 struct tm zeroDate = {0};
 
-
+int findLast(const char* text, char c)
+{
+	int index;
+	index = strlen(text) - 1;
+	while(text[index] != c && index > 0)
+	{
+		index--;
+	}
+	return index;
+}
 
 int daysInMonth(struct tm date)
 {
