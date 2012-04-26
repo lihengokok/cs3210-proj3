@@ -1,0 +1,37 @@
+﻿Denning Technology & Management Program
+Andrew Thaddeus Martin
+334909 Georgia Tech Station – Atlanta, GA 30332-1590
+4240 Martin Road – Cumming, GA 30028
+(678) 571-2530 – amartin47@gatech.edu
+
+CAREER OBJECTIVE
+	To obtain a meaningful and challenging position in the field of computer science that allows for advancement.
+
+EDUCATION
+	GEORGIA INSTITUTE OF TECHNOLOGY, COLLEGE OF COMPUTING
+		Bachelor of Science in Computer Science
+		Bachelor of Science in Applied Language and Intercultural Studies (Spanish)
+		Minor in Engineering & Management
+	May 2013
+	GPA: 3.95
+
+WORK EXPERIENCE
+	MSL Research Lab
+		Research Assistant in Dr. Russell Peak’s Lab
+		August 2010-May 2011
+	Developed MagicDraw plug-ins that allowed SysML to translate into instructions for the Scribbler robot
+
+RELEVANT PROFESSIONAL SKILLS
+	Management Coursework: Analysis of Emerging Technologies (Fall 2011)
+	Computer Science Coursework: Understanding of most common search and sort algorithms, understanding of Java & JVM.
+	Basic understanding of kinematics and dynamics, training in formal computational theory
+	Group projects: Developed a calendar application in Smalltalk with other students in Objects and Design class.
+	Worked with group in Robotics and Perception course to make a robot behave intelligently (path choice, object recognition)
+	Languages: English – native, Spanish – general mastery
+	Computer Languages/Frameworks: C++, Python, Java, Smalltalk, .NET
+
+ACHIEVEMENTS/INTERESTS
+	Affiliations: Georgia Tech Honors Program
+	Activities: Navigators Ministry
+	Volunteer: Say Yes! afterschool program for elementary school children, Grady Hospital volunteer
+	Interests: Independent studies of linguistic phenomena
