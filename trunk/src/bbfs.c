@@ -37,17 +37,54 @@
 #include "log.h"
 #include "btree.h"
 
-
-
-typedef char month[31]; //actually just an array of booleans
-typedef month* monthPtr;
-typedef monthPtr year[12];
-
-
 struct stat* permissionsFile;
 struct stat* permissionsFolder;
 struct tnode *root = NULL;
+static struct tnode *years = NULL;
 
+static void addDay(time_t time)
+{
+	struct tm* timeTm;
+	struct tnode *yearNode, *monthNode, *dayNode;
+	struct year *myYear;
+	struct month *myMonth;
+	struct day *myDay;
+	timeTm = localtime(&time);
+	myYear = malloc(sizeof(struct year));
+	myYear->yearNum = timeTm->tm_year;
+	myYear->months = NULL;
+	myMonth = malloc(sizeof(struct month));
+	myMonth->monthNum = timeTm->tm_mon;
+	myMonth->days = NULL;
+	myDay = malloc(sizeof(struct day));
+	myDay->dayNum = timeTm->tm_mday;
+	if((yearNode = tnode_search(years, myYear, yearsCompare)) == NULL)
+	{
+		printf("Years\n");
+		years = tnode_insert(years, myYear, yearsCompare);
+		yearNode = tnode_search(years, myYear, yearsCompare);
+		yearNode->data = myYear;
+	} else free(myYear);
+	if((monthNode = tnode_search(((struct year*)(yearNode->data))->months, myMonth, monthsCompare)) == NULL)
+	{
+		printf("Months\n");
+		((struct year*)(yearNode->data))->months = tnode_insert(((struct year*)(yearNode->data))->months, myMonth, monthsCompare);
+		monthNode = ((struct year*)(yearNode->data))->months;
+		monthNode = tnode_search(monthNode, myMonth, monthsCompare);
+		monthNode->data = myMonth;
+		//printf("Month node data addr: %i\n", (int)(monthNode->data));
+	} else free(myMonth);
+	if((dayNode = tnode_search(((struct month*)(monthNode->data))->days, myDay, daysCompare)) == NULL)
+	{
+		printf("Days\n");
+		((struct month*)(monthNode->data))->days = tnode_insert(((struct month*)(monthNode->data))->days, myDay, daysCompare);
+		dayNode = ((struct month*)(monthNode->data))->days;
+		dayNode = tnode_search(dayNode, myDay, daysCompare);
+		dayNode->data = myDay;
+	} else free(myDay);
+
+	
+}
 
 //Note: we're also going to populate the time period dirs
 //as we iterate over these photos
@@ -74,6 +111,7 @@ static void createNodeAndAdd(const char * path, const char * fileName, struct tn
 	snap->time = statbuf->st_mtime;
 	//printf("%i\n", (int)snap->time);
 	*rootNode = tnode_insert(*rootNode, snap, snapshotComp);
+	addDay(statbuf->st_mtime);
 	free(statbuf);
 }
 
@@ -129,7 +167,9 @@ int bb_getattr(const char *path, struct stat *statbuf)
 	//If it doesn't, we do something else sneaky
 	date = pathToTmComplete(path);
 	if(isZero(&date))
+	{
 		retstat = bb_error("bb_getattr lstat");
+	}
 	else
 	{
 		*statbuf = *permissionsFolder;
@@ -140,7 +180,7 @@ int bb_getattr(const char *path, struct stat *statbuf)
 	
 	retstat = lstat(fpath, statbuf);
 	if (retstat != 0)
-	retstat = bb_error("bb_getattr lstat");
+		retstat = bb_error("bb_getattr lstat");
 	
 	log_stat(statbuf);
 	
@@ -695,17 +735,18 @@ int bb_opendir(const char *path, struct fuse_file_info *fi)
 	char fpath[PATH_MAX];
 	struct tm date;
 	  
+	if(strcmp("/", path) == 0)
+		return 0;
 	//Note, this is the scenario where it ends in a folder name
 	//If it doesn't, in this case, it fails
 	date = pathToTmComplete(path);
 	if(isZero(&date))
 	{
-		retstat = bb_error("bb_getattr lstat");
+		//retstat = bb_error("bb_getattr lstat");
 		//return retstat;
 	}
 	else
 	{
-		
 		return 0;
 	}
 	
@@ -753,6 +794,11 @@ int bb_readdir(const char *path, void *buf, fuse_fill_dir_t filler, off_t offset
 	struct dirent *de;
 	struct tm date;
 	  
+	if(strcmp("/", path) == 0)
+	{
+		fillYears(years, buf, filler);
+		return 0;
+	}
 	//Note, this is the scenario where it ends in a folder name
 	//If it doesn't, in this case, it fails
 	date = pathToTmComplete(path);
@@ -765,8 +811,16 @@ int bb_readdir(const char *path, void *buf, fuse_fill_dir_t filler, off_t offset
 		filler(buf, "..", NULL, 0);
 		if(date.tm_mon == -1) //in this case, only a year was specified
 		{
+			struct year yearData;
+			struct tnode* yearNode;
+			yearData.yearNum = date.tm_year;
+			yearNode = tnode_search(years, &yearData, yearsCompare);
+			if(yearNode != NULL)
+			{
+				fillMonths(((struct year*)(yearNode->data))->months, buf, filler);
+			}
 			
-			filler(buf, "jan", NULL, 0);
+			/*filler(buf, "jan", NULL, 0);
 			filler(buf, "feb", NULL, 0);
 			filler(buf, "mar", NULL, 0);
 			filler(buf, "apr", NULL, 0);
@@ -777,7 +831,7 @@ int bb_readdir(const char *path, void *buf, fuse_fill_dir_t filler, off_t offset
 			filler(buf, "sep", NULL, 0);
 			filler(buf, "oct", NULL, 0);
 			filler(buf, "nov", NULL, 0);
-			filler(buf, "dec", NULL, 0);
+			filler(buf, "dec", NULL, 0);*/
 			date.tm_mon = 0;
 			date.tm_mday = 1;
 			date.tm_hour = 0;
@@ -832,7 +886,7 @@ int bb_readdir(const char *path, void *buf, fuse_fill_dir_t filler, off_t offset
 	// which I can get an error from readdir()
 	de = readdir(dp);
 	if (de == 0) {
-	retstat = bb_error("bb_readdir readdir");
+		retstat = bb_error("bb_readdir readdir");
 	return retstat;
 	}
 
@@ -1160,6 +1214,11 @@ int main(int argc, char *argv[])
 		createNodeAndAdd(bb_data->rootdir, entry->d_name, &root);
         printf("%s\n", entry->d_name);
     }
+    
+    //print out the year 2011
+    printf("Years data addr: %i\n", (int)(((struct year*)(years->data))->months));
+    logMonths(((struct year*)(years->data))->months);
+    
     
 	printf("\n");
     //print all the nodes out to see the tree

@@ -35,6 +35,7 @@ struct tnode* firstPic(time_t beginTime, struct tnode* node)
 		return firstPic(beginTime, node->right);
 	}
 }
+
 struct tnode* lastPic(time_t beginTime, struct tnode* node)
 {
 	if(node == NULL) return NULL;
@@ -67,6 +68,124 @@ void fillBuffer(time_t start, time_t end, struct tnode* rootNode, void* buf, fus
 		log_msg("\nEnd Name: %s\n", ((struct t_snapshot*)(last->data))->name);
 		traverseAndFillBuffer(first, last, buf, filler);
 	}
+}
+
+void fillYears(struct tnode *years, void* buf, fuse_fill_dir_t filler)
+{
+	char asString[7];
+	if(years == NULL)
+		return;
+	fillYears(years->left, buf, filler);
+	sprintf(asString, "%04d", ((struct year*)(years->data))->yearNum + 1900);
+	filler(buf, asString , NULL, 0);
+	fillYears(years->right, buf, filler);
+	
+}
+
+void logMonths(struct tnode *months)
+{
+	char* asString = malloc(4);
+	if(months == NULL)
+		return;
+	printf("%i\n", (int)months);
+	logMonths(months->left);
+	switch(((struct month*)(months->data))->monthNum)
+	{
+		case 0:
+			printf("January\n");
+			strcpy(asString, "jan");
+			break;
+		case 1:
+			strcpy(asString, "feb");
+			break;
+		case 2:
+			strcpy(asString, "mar");
+			break;
+		case 3:
+			strcpy(asString, "apr");
+			break;
+		case 4:
+			strcpy(asString, "may");
+			break;
+		case 5:
+			strcpy(asString, "jun");
+			break;
+		case 6:
+			strcpy(asString, "jul");
+			break;
+		case 7:
+			strcpy(asString, "aug");
+			break;
+		case 8:
+			strcpy(asString, "sep");
+			break;
+		case 9:
+			strcpy(asString, "oct");
+			break;
+		case 10:
+			strcpy(asString, "nov");
+			break;
+		case 11:
+			strcpy(asString, "dec");
+			break;
+	}
+	printf("Here: %s\n", asString);
+	/*log_msg("Month:\n");
+	log_msg("%s\n", asString);
+	log_msg("\n");*/
+	printf("Logged\n");
+	free(asString);
+	logMonths(months->right);
+}
+
+void fillMonths(struct tnode *months, void* buf, fuse_fill_dir_t filler)
+{
+	char* asString = malloc(4);
+	if(months == NULL)
+		return;
+	fillMonths(months->left, buf, filler);
+	switch(((struct month*)(months->data))->monthNum)
+	{
+		case 0:
+			strcpy(asString, "jan");
+			break;
+		case 1:
+			strcpy(asString, "feb");
+			break;
+		case 2:
+			strcpy(asString, "mar");
+			break;
+		case 3:
+			strcpy(asString, "apr");
+			break;
+		case 4:
+			strcpy(asString, "may");
+			break;
+		case 5:
+			strcpy(asString, "jun");
+			break;
+		case 6:
+			strcpy(asString, "jul");
+			break;
+		case 7:
+			strcpy(asString, "aug");
+			break;
+		case 8:
+			strcpy(asString, "sep");
+			break;
+		case 9:
+			strcpy(asString, "oct");
+			break;
+		case 10:
+			strcpy(asString, "nov");
+			break;
+		case 11:
+			strcpy(asString, "dec");
+			break;
+	}
+	filler(buf, asString , NULL, 0);
+	fillMonths(months->right, buf, filler);
+	free(asString);
 }
 
 //The upper bound is excluded, the lower bound is included
@@ -119,6 +238,28 @@ int snapshotComp(void* a, void* b)
 	second = b;
 	return first->time - second->time;
 }
+int yearsCompare(void* a, void* b)
+{
+	struct year *first, *second;
+	first = a;
+	second = b;
+	return first->yearNum - second->yearNum;
+}
+int monthsCompare(void* a, void* b)
+{
+	struct month *first, *second;
+	first = a;
+	second = b;
+	return first->monthNum - second->monthNum;
+}
+int daysCompare(void* a, void* b)
+{
+	struct day *first, *second;
+	first = a;
+	second = b;
+	return first->dayNum - second->dayNum;
+}
+
 void snapshotPrint(void* a)
 {
 	struct t_snapshot *snap;

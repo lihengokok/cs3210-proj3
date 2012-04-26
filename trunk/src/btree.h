@@ -2,6 +2,7 @@
 #include <sys/stat.h>
 #include <unistd.h>
 
+
 struct tnode 
 {
 	void* data;
@@ -9,6 +10,25 @@ struct tnode
 	struct tnode *right;
 	struct tnode *parent;
 };
+
+
+struct day
+{
+	int dayNum;
+};
+
+struct month
+{
+	int monthNum;
+	struct tnode* days;
+};
+
+struct year
+{
+	int yearNum;
+	struct tnode* months;
+};
+
 
 struct t_snapshot
 {
@@ -38,9 +58,16 @@ void print_postorder(struct tnode *p, printer);
 int snapshotComp(void* a, void* b);
 void snapshotPrint(void* a);
 
+int yearsCompare(void* a, void* b);
+int monthsCompare(void* a, void* b);
+int daysCompare(void* a, void* b);
+
 struct tnode* firstPic(time_t beginTime, struct tnode* node);
 struct tnode* lastPic(time_t beginTime, struct tnode* node);
 void traverseAndFillBuffer(struct tnode *start, struct tnode *end, void* buf, fuse_fill_dir_t filler);
 int traverseInOrderFillBuffer(struct tnode *node, struct tnode *end, void* buf, fuse_fill_dir_t filler);
 void fillBuffer(time_t start, time_t end, struct tnode* rootNode, void* buf, fuse_fill_dir_t filler);
 
+void fillYears(struct tnode *years, void* buf, fuse_fill_dir_t filler);
+void fillMonths(struct tnode *months, void* buf, fuse_fill_dir_t filler);
+void logMonths(struct tnode *months);
