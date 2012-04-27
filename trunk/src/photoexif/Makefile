@@ -1,4 +1,4 @@
-a.out:
-	gcc photoexif.c -lexif
+photo:
+	gcc location.c -lexif -o photo
 clean:
-	rm -f a.out *.o
+	rm -f photo *.o
