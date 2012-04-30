@@ -1239,6 +1239,58 @@ int bb_access(const char *path, int mask)
 {
 	int retstat = 0;
 	char fpath[PATH_MAX];
+	struct tm date;
+	
+	
+	date = pathToTmComplete(path);
+	
+	
+	if(isZero(&date))
+	{
+		retstat = bb_error("bb_getattr lstat");
+	}
+	else
+	{
+		return 0;
+	}
+		
+	//index = findLast(path, '/');
+	
+	if(strlen(path + 1) > 12)
+	{
+		char store;
+		char* isGood;
+		char* isGood2;
+		char* path2;
+		struct tm beginTm;
+		struct tm endTm;
+		int dashIndex;
+		path2 = path;
+		dashIndex = findLast(path2 + 1, '-');
+		if(dashIndex > 0)
+		{
+			(path2 + 1)[dashIndex] = '\0';
+			
+			isGood = strptime(path2 + 1, "%Y:%m:%d", &beginTm);
+			log_msg("First part of path: %s\n", path2 + 1);
+			isGood2 = strptime(path2 + 2 + dashIndex, "%Y:%m:%d", &endTm);
+			log_msg("Second part of path: %s\n", path2 + 2 + dashIndex);
+			beginTm.tm_sec = 0;
+			beginTm.tm_min = 0;
+			beginTm.tm_hour = 0;
+			
+			endTm.tm_sec = 0;
+			endTm.tm_min = 0;
+			endTm.tm_hour = 0;
+			
+			if(isGood != NULL && isGood2 != NULL)
+			{
+				return 0;
+			}
+			(path2 + 1)[dashIndex] = '-';
+		}
+		
+	}
 	
 	log_msg("\nbb_access(path=\"%s\", mask=0%o)\n",
 		path, mask);
