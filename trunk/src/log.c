@@ -36,10 +36,10 @@ FILE *log_open()
 
 void log_msg(const char *format, ...)
 {
-   //va_list ap;
-   //va_start(ap, format);
+   va_list ap;
+   va_start(ap, format);
 
-   //vfprintf(BB_DATA->logfile, format, ap);
+   vfprintf(BB_DATA->logfile, format, ap);
 }
     
 // struct fuse_file_info keeps information about files (surprise!).

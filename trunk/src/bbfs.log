@@ -1,0 +1,4118 @@
+
+bb_init()
+
+bb_getattr(path="/.Trash", statbuf=0xb6f501b0)
+
+Indiced Diff: 6
+
+Fixed Path: /.Trash/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/.Trash", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/.Trash"
+	ERROR bb_getattr lstat: No such file or directory
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_getattr(path="/.Trash-1000", statbuf=0xb77731b0)
+
+Indiced Diff: 11
+
+Fixed Path: /.Trash-1000/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/.Trash-1000", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/.Trash-1000"
+	ERROR bb_getattr lstat: No such file or directory
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_getattr(path="/.xdg-volume-info", statbuf=0xb6f501b0)
+
+Indiced Diff: 16
+
+Fixed Path: /.xdg-volume-info/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/.xdg-volume-info", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/.xdg-volume-info"
+	ERROR bb_getattr lstat: No such file or directory
+First part of path: .xdg-volume
+Second part of path: info
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_getattr(path="/autorun.inf", statbuf=0xb77731b0)
+
+Indiced Diff: 11
+
+Fixed Path: /autorun.inf/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/autorun.inf", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/autorun.inf"
+	ERROR bb_getattr lstat: No such file or directory
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+Root node start time 1335390988
+
+Start Name: kodak-dc240.jpg
+
+End Name: travel_0011.jpg
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseAndFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseAndFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+
+bb_getattr(path="/1975", statbuf=0xb6f501b0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: 
+
+Fixed Path: /1975/, Year: 75, Month: -1, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/1975", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/1975"
+
+bb_getattr(path="/1998", statbuf=0xb77731b0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: 
+
+Fixed Path: /1998/, Year: 98, Month: -1, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/1998", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/1998"
+
+bb_getattr(path="/2000", statbuf=0xb6f501b0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: 
+
+Fixed Path: /2000/, Year: 100, Month: -1, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/2000", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/2000"
+
+bb_getattr(path="/2001", statbuf=0xb77731b0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: 
+
+Fixed Path: /2001/, Year: 101, Month: -1, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/2001", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/2001"
+
+bb_getattr(path="/2007", statbuf=0xb6f501b0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: 
+
+Fixed Path: /2007/, Year: 107, Month: -1, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/2007", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/2007"
+
+bb_getattr(path="/2012", statbuf=0xb77731b0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: 
+
+Fixed Path: /2012/, Year: 112, Month: -1, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/2012", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/2012"
+
+bb_getattr(path="/kodak-dc240.jpg", statbuf=0xb77731b0)
+
+Indiced Diff: 15
+
+Fixed Path: /kodak-dc240.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/kodak-dc240.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/kodak-dc240.jpg"
+First part of path: kodak
+Second part of path: dc240.jpg
+    st_dev = 2053
+    st_ino = 1968687
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 81901
+    st_blksize = 4096
+    st_blocks = 160
+    st_atime = 0x4f9de36d
+    st_mtime = 0x4f999f22
+    st_ctime = 0x4f999f22
+
+bb_getattr(path="/ricoh-rdc5300.jpg", statbuf=0xb6f501b0)
+
+Indiced Diff: 17
+
+Fixed Path: /ricoh-rdc5300.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/ricoh-rdc5300.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/ricoh-rdc5300.jpg"
+First part of path: ricoh
+Second part of path: rdc5300.jpg
+    st_dev = 2053
+    st_ino = 1968698
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 87626
+    st_blksize = 4096
+    st_blocks = 176
+    st_atime = 0x4f9de36f
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/kodak-dc210.jpg", statbuf=0xb77731b0)
+
+Indiced Diff: 15
+
+Fixed Path: /kodak-dc210.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/kodak-dc210.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/kodak-dc210.jpg"
+First part of path: kodak
+Second part of path: dc210.jpg
+    st_dev = 2053
+    st_ino = 1968684
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 79837
+    st_blksize = 4096
+    st_blocks = 160
+    st_atime = 0x4f9de36f
+    st_mtime = 0x4f999f22
+    st_ctime = 0x4f999f22
+
+bb_getattr(path="/sanyo-vpcg250.jpg", statbuf=0xb6f501b0)
+
+Indiced Diff: 17
+
+Fixed Path: /sanyo-vpcg250.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/sanyo-vpcg250.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/sanyo-vpcg250.jpg"
+First part of path: sanyo
+Second part of path: vpcg250.jpg
+    st_dev = 2053
+    st_ino = 1968694
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 62096
+    st_blksize = 4096
+    st_blocks = 128
+    st_atime = 0x4f9de36e
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/sony-d700.jpg", statbuf=0xb77731b0)
+
+Indiced Diff: 13
+
+Fixed Path: /sony-d700.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/sony-d700.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/sony-d700.jpg"
+First part of path: sony
+Second part of path: d700.jpg
+    st_dev = 2053
+    st_ino = 1968682
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 79446
+    st_blksize = 4096
+    st_blocks = 160
+    st_atime = 0x4f9de36e
+    st_mtime = 0x4f999f22
+    st_ctime = 0x4f999f22
+
+bb_getattr(path="/fujifilm-finepix40i.jpg", statbuf=0xb6f501b0)
+
+Indiced Diff: 23
+
+Fixed Path: /fujifilm-finepix40i.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/fujifilm-finepix40i.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/fujifilm-finepix40i.jpg"
+First part of path: fujifilm
+Second part of path: finepix40i.jpg
+    st_dev = 2053
+    st_ino = 1968697
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 43183
+    st_blksize = 4096
+    st_blocks = 88
+    st_atime = 0x4f9de36f
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/fujifilm-mx1700.jpg", statbuf=0xb77731b0)
+
+Indiced Diff: 19
+
+Fixed Path: /fujifilm-mx1700.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/fujifilm-mx1700.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/fujifilm-mx1700.jpg"
+First part of path: fujifilm
+Second part of path: mx1700.jpg
+    st_dev = 2053
+    st_ino = 1968709
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 100227
+    st_blksize = 4096
+    st_blocks = 200
+    st_atime = 0x4f9de36d
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/sony-cybershot.jpg", statbuf=0xb6f501b0)
+
+Indiced Diff: 18
+
+Fixed Path: /sony-cybershot.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/sony-cybershot.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/sony-cybershot.jpg"
+First part of path: sony
+Second part of path: cybershot.jpg
+    st_dev = 2053
+    st_ino = 1968703
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 63643
+    st_blksize = 4096
+    st_blocks = 128
+    st_atime = 0x4f9de36f
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/olympus-c960.jpg", statbuf=0xb77731b0)
+
+Indiced Diff: 16
+
+Fixed Path: /olympus-c960.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/olympus-c960.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/olympus-c960.jpg"
+First part of path: olympus
+Second part of path: c960.jpg
+    st_dev = 2053
+    st_ino = 1968702
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 87599
+    st_blksize = 4096
+    st_blocks = 176
+    st_atime = 0x4f9de36d
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/sanyo-vpcsx550.jpg", statbuf=0xb6f501b0)
+
+Indiced Diff: 18
+
+Fixed Path: /sanyo-vpcsx550.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/sanyo-vpcsx550.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/sanyo-vpcsx550.jpg"
+First part of path: sanyo
+Second part of path: vpcsx550.jpg
+    st_dev = 2053
+    st_ino = 1968699
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 102448
+    st_blksize = 4096
+    st_blocks = 208
+    st_atime = 0x4f9de36d
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/nikon-e950.jpg", statbuf=0xb77731b0)
+
+Indiced Diff: 14
+
+Fixed Path: /nikon-e950.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/nikon-e950.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/nikon-e950.jpg"
+First part of path: nikon
+Second part of path: e950.jpg
+    st_dev = 2053
+    st_ino = 1968707
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 164151
+    st_blksize = 4096
+    st_blocks = 328
+    st_atime = 0x4f9de36f
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/fujifilm-dx10.jpg", statbuf=0xb6f501b0)
+
+Indiced Diff: 17
+
+Fixed Path: /fujifilm-dx10.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/fujifilm-dx10.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/fujifilm-dx10.jpg"
+First part of path: fujifilm
+Second part of path: dx10.jpg
+    st_dev = 2053
+    st_ino = 1968696
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 133074
+    st_blksize = 4096
+    st_blocks = 264
+    st_atime = 0x4f9de36f
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/canon-ixus.jpg", statbuf=0xb77731b0)
+
+Indiced Diff: 14
+
+Fixed Path: /canon-ixus.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/canon-ixus.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/canon-ixus.jpg"
+First part of path: canon
+Second part of path: ixus.jpg
+    st_dev = 2053
+    st_ino = 1968700
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 128037
+    st_blksize = 4096
+    st_blocks = 256
+    st_atime = 0x4f9de36f
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/travel_0012.jpg", statbuf=0xb6f501b0)
+
+Indiced Diff: 15
+
+Fixed Path: /travel_0012.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/travel_0012.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/travel_0012.jpg"
+    st_dev = 2053
+    st_ino = 1968708
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 540389
+    st_blksize = 4096
+    st_blocks = 1056
+    st_atime = 0x4f9de36d
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/Cool Building.jpg", statbuf=0xb77731b0)
+
+Indiced Diff: 17
+
+Fixed Path: /Cool Building.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/Cool Building.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/Cool Building.jpg"
+    st_dev = 2053
+    st_ino = 1968691
+    st_mode = 0100775
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 2015573
+    st_blksize = 4096
+    st_blocks = 3944
+    st_atime = 0x4f9de36e
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/In Traffic.jpg", statbuf=0xb6f501b0)
+
+Indiced Diff: 14
+
+Fixed Path: /In Traffic.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/In Traffic.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/In Traffic.jpg"
+    st_dev = 2053
+    st_ino = 1968689
+    st_mode = 0100775
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 2550810
+    st_blksize = 4096
+    st_blocks = 4984
+    st_atime = 0x4f9de36f
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/Sidewalk.jpg", statbuf=0xb77731b0)
+
+Indiced Diff: 12
+
+Fixed Path: /Sidewalk.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/Sidewalk.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/Sidewalk.jpg"
+    st_dev = 2053
+    st_ino = 1968686
+    st_mode = 0100775
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 2388720
+    st_blksize = 4096
+    st_blocks = 4672
+    st_atime = 0x4f9de36e
+    st_mtime = 0x4f999f22
+    st_ctime = 0x4f999f22
+
+bb_getattr(path="/bridge.jpg", statbuf=0xb6f501b0)
+
+Indiced Diff: 10
+
+Fixed Path: /bridge.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/bridge.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/bridge.jpg"
+    st_dev = 2053
+    st_ino = 1968705
+    st_mode = 0100775
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 2328028
+    st_blksize = 4096
+    st_blocks = 4552
+    st_atime = 0x4f9de36d
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/Sunny.jpg", statbuf=0xb77731b0)
+
+Indiced Diff: 9
+
+Fixed Path: /Sunny.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/Sunny.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/Sunny.jpg"
+    st_dev = 2053
+    st_ino = 1968693
+    st_mode = 0100775
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 2450914
+    st_blksize = 4096
+    st_blocks = 4792
+    st_atime = 0x4f9de36e
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/IHOP.jpg", statbuf=0xb6f501b0)
+
+Indiced Diff: 8
+
+Fixed Path: /IHOP.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/IHOP.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/IHOP.jpg"
+    st_dev = 2053
+    st_ino = 1968710
+    st_mode = 0100775
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 2470785
+    st_blksize = 4096
+    st_blocks = 4832
+    st_atime = 0x4f9de36d
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/hello.txt", statbuf=0xb77731b0)
+
+Indiced Diff: 9
+
+Fixed Path: /hello.txt/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/hello.txt", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/hello.txt"
+    st_dev = 2053
+    st_ino = 1968685
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 7
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x4f9de36d
+    st_mtime = 0x4f999f22
+    st_ctime = 0x4f999f22
+
+bb_getattr(path="/mozilla.pdf", statbuf=0xb6f501b0)
+
+Indiced Diff: 11
+
+Fixed Path: /mozilla.pdf/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/mozilla.pdf", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/mozilla.pdf"
+    st_dev = 2053
+    st_ino = 1968683
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 73210
+    st_blksize = 4096
+    st_blocks = 144
+    st_atime = 0x4f9de36e
+    st_mtime = 0x4f999f22
+    st_ctime = 0x4f999f22
+
+bb_getattr(path="/Phillip Wilkerson - Another Light.mp3", statbuf=0xb77731b0)
+
+Indiced Diff: 37
+
+Fixed Path: /Phillip Wilkerson - Another Light.mp3/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/Phillip Wilkerson - Another Light.mp3", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/Phillip Wilkerson - Another Light.mp3"
+First part of path: Phillip Wilkerson 
+Second part of path:  Another Light.mp3
+    st_dev = 2053
+    st_ino = 1968688
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 8665740
+    st_blksize = 4096
+    st_blocks = 16928
+    st_atime = 0x4f9de36f
+    st_mtime = 0x4f999f22
+    st_ctime = 0x4f999f22
+
+bb_getattr(path="/cover.jpg", statbuf=0xb6f501b0)
+
+Indiced Diff: 9
+
+Fixed Path: /cover.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/cover.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/cover.jpg"
+    st_dev = 2053
+    st_ino = 1968695
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 15758
+    st_blksize = 4096
+    st_blocks = 32
+    st_atime = 0x4f9de36d
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/Devos_SLT.html", statbuf=0xb77731b0)
+
+Indiced Diff: 14
+
+Fixed Path: /Devos_SLT.html/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/Devos_SLT.html", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/Devos_SLT.html"
+    st_dev = 2053
+    st_ino = 1968701
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 19471
+    st_blksize = 4096
+    st_blocks = 40
+    st_atime = 0x4f9de36d
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/index.html", statbuf=0xb6f501b0)
+
+Indiced Diff: 10
+
+Fixed Path: /index.html/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/index.html", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/index.html"
+    st_dev = 2053
+    st_ino = 1968704
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 5074
+    st_blksize = 4096
+    st_blocks = 16
+    st_atime = 0x4f9de36f
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/How fast.ogg", statbuf=0xb77731b0)
+
+Indiced Diff: 12
+
+Fixed Path: /How fast.ogg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/How fast.ogg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/How fast.ogg"
+    st_dev = 2053
+    st_ino = 1968690
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 1915873
+    st_blksize = 4096
+    st_blocks = 3744
+    st_atime = 0x4f9de36f
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/Andrew Martin resume.txt", statbuf=0xb6f501b0)
+
+Indiced Diff: 24
+
+Fixed Path: /Andrew Martin resume.txt/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/Andrew Martin resume.txt", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/Andrew Martin resume.txt"
+    st_dev = 2053
+    st_ino = 1968692
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 1741
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x4f9de36f
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/travel_0011.jpg", statbuf=0xb77731b0)
+
+Indiced Diff: 15
+
+Fixed Path: /travel_0011.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/travel_0011.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/travel_0011.jpg"
+    st_dev = 2053
+    st_ino = 1968706
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 318399
+    st_blksize = 4096
+    st_blocks = 624
+    st_atime = 0x4f9de36f
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_releasedir(path="/", fi=0xb77731e0)
+    flags = 0x00000000
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000000
+    lock_owner = 0x0000000000000000
+
+Root node start time 1335390988
+
+Start Name: kodak-dc240.jpg
+
+End Name: travel_0011.jpg
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseAndFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseAndFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+
+bb_releasedir(path="/", fi=0xb77731e0)
+    flags = 0x00000000
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000000
+    lock_owner = 0x0000000000000000
+
+Root node start time 1335390988
+
+Start Name: kodak-dc240.jpg
+
+End Name: travel_0011.jpg
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseAndFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseAndFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+
+bb_releasedir(path="/", fi=0xb77731e0)
+    flags = 0x00000000
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000000
+    lock_owner = 0x0000000000000000
+
+Root node start time 1335390988
+
+Start Name: kodak-dc240.jpg
+
+End Name: travel_0011.jpg
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseAndFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseAndFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+
+bb_releasedir(path="/", fi=0xb77731e0)
+    flags = 0x00000000
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000000
+    lock_owner = 0x0000000000000000
+
+Root node start time 1335390988
+
+Start Name: kodak-dc240.jpg
+
+End Name: travel_0011.jpg
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseAndFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseAndFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+
+bb_releasedir(path="/", fi=0xb77731e0)
+    flags = 0x00000000
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000000
+    lock_owner = 0x0000000000000000
+
+Root node start time 1335390988
+
+Start Name: kodak-dc240.jpg
+
+End Name: travel_0011.jpg
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseAndFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseAndFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+
+bb_releasedir(path="/", fi=0xb77731e0)
+    flags = 0x00000000
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000000
+    lock_owner = 0x0000000000000000
+
+Root node start time 1335390988
+
+Start Name: kodak-dc240.jpg
+
+End Name: travel_0011.jpg
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseAndFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseAndFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+
+bb_releasedir(path="/", fi=0xb77731e0)
+    flags = 0x00000000
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000000
+    lock_owner = 0x0000000000000000
+
+Root node start time 1335390988
+
+Start Name: kodak-dc240.jpg
+
+End Name: travel_0011.jpg
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseAndFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseAndFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+
+bb_releasedir(path="/", fi=0xb77731e0)
+    flags = 0x00000000
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000000
+    lock_owner = 0x0000000000000000
+
+Root node start time 1335390988
+
+Start Name: kodak-dc240.jpg
+
+End Name: travel_0011.jpg
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseAndFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseAndFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+
+bb_releasedir(path="/", fi=0xb77731e0)
+    flags = 0x00000000
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000000
+    lock_owner = 0x0000000000000000
+
+Root node start time 1335390988
+
+Start Name: kodak-dc240.jpg
+
+End Name: travel_0011.jpg
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseAndFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseAndFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+
+bb_releasedir(path="/", fi=0xb77731e0)
+    flags = 0x00000000
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000000
+    lock_owner = 0x0000000000000000
+
+Root node start time 1335390988
+
+Start Name: kodak-dc240.jpg
+
+End Name: travel_0011.jpg
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseAndFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseAndFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+
+bb_releasedir(path="/", fi=0xb77731e0)
+    flags = 0x00000000
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000000
+    lock_owner = 0x0000000000000000
+
+Root node start time 1335390988
+
+Start Name: kodak-dc240.jpg
+
+End Name: travel_0011.jpg
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseAndFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseAndFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+
+bb_releasedir(path="/", fi=0xb77731e0)
+    flags = 0x00000000
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000000
+    lock_owner = 0x0000000000000000
+
+Root node start time 1335390988
+
+Start Name: kodak-dc240.jpg
+
+End Name: travel_0011.jpg
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseAndFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseAndFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+
+bb_releasedir(path="/", fi=0xb77731e0)
+    flags = 0x00000000
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000000
+    lock_owner = 0x0000000000000000
+
+Root node start time 1335390988
+
+Start Name: kodak-dc240.jpg
+
+End Name: travel_0011.jpg
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseAndFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseAndFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+
+bb_releasedir(path="/", fi=0xb77731e0)
+    flags = 0x00000000
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000000
+    lock_owner = 0x0000000000000000
+
+Root node start time 1335390988
+
+Start Name: kodak-dc240.jpg
+
+End Name: travel_0011.jpg
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseAndFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseAndFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+
+bb_releasedir(path="/", fi=0xb77731e0)
+    flags = 0x00000000
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000000
+    lock_owner = 0x0000000000000000
+
+Root node start time 1335390988
+
+Start Name: kodak-dc240.jpg
+
+End Name: travel_0011.jpg
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseAndFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseAndFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+
+bb_releasedir(path="/", fi=0xb77731e0)
+    flags = 0x00000000
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000000
+    lock_owner = 0x0000000000000000
+
+Root node start time 1335390988
+
+Start Name: kodak-dc240.jpg
+
+End Name: travel_0011.jpg
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseAndFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseAndFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+
+bb_releasedir(path="/", fi=0xb77731e0)
+    flags = 0x00000000
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000000
+    lock_owner = 0x0000000000000000
+
+Root node start time 1335390988
+
+Start Name: kodak-dc240.jpg
+
+End Name: travel_0011.jpg
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseAndFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseAndFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+
+bb_releasedir(path="/", fi=0xb77731e0)
+    flags = 0x00000000
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000000
+    lock_owner = 0x0000000000000000
+
+Root node start time 1335390988
+
+Start Name: kodak-dc240.jpg
+
+End Name: travel_0011.jpg
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseAndFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseAndFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+
+bb_releasedir(path="/", fi=0xb6f501e0)
+    flags = 0x00000000
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000000
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/autorun.inf", statbuf=0xb77731b0)
+
+Indiced Diff: 11
+
+Fixed Path: /autorun.inf/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/autorun.inf", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/autorun.inf"
+	ERROR bb_getattr lstat: No such file or directory
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_getattr(path="/", statbuf=0xb6f501a0)
+
+Indiced Diff: 0
+
+Fixed Path: //, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/"
+    st_dev = 2053
+    st_ino = 1966038
+    st_mode = 040775
+    st_nlink = 4
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x4f9de256
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: 
+
+Fixed Path: /2012/, Year: 112, Month: -1, Day: 0
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: 
+
+Fixed Path: /2012/, Year: 112, Month: -1, Day: 0
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: 
+
+Fixed Path: /2012/, Year: 112, Month: -1, Day: 0
+
+Start Time: 1325394000
+
+End Time: 1357016400
+
+Root node start time 1335390988
+
+Start Name: Cool Building.jpg
+
+End Name: travel_0011.jpg
+traverseInOrderFillBuffer
+traverseAndFillBuffer
+traverseAndFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+
+bb_getattr(path="/2012/mar", statbuf=0xb6f501b0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: mar
+
+Fixed Path: /2012/mar/, Year: 112, Month: 2, Day: -1
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/2012/mar", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/mar"
+
+bb_getattr(path="/2012/apr", statbuf=0xb77731b0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: apr
+
+Fixed Path: /2012/apr/, Year: 112, Month: 3, Day: -1
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/2012/apr", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/apr"
+
+bb_getattr(path="/2012/Cool Building.jpg", statbuf=0xb6f501b0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: 
+
+Fixed Path: /2012/Cool Building.jpg/, Year: 112, Month: -1, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/2012/Cool Building.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/Cool Building.jpg"
+    st_dev = 2053
+    st_ino = 1968691
+    st_mode = 0100775
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 2015573
+    st_blksize = 4096
+    st_blocks = 3944
+    st_atime = 0x4f9de36e
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/2012/In Traffic.jpg", statbuf=0xb77731b0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: 
+
+Fixed Path: /2012/In Traffic.jpg/, Year: 112, Month: -1, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/2012/In Traffic.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/In Traffic.jpg"
+    st_dev = 2053
+    st_ino = 1968689
+    st_mode = 0100775
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 2550810
+    st_blksize = 4096
+    st_blocks = 4984
+    st_atime = 0x4f9de36f
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/2012/Sidewalk.jpg", statbuf=0xb6f501b0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: 
+
+Fixed Path: /2012/Sidewalk.jpg/, Year: 112, Month: -1, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/2012/Sidewalk.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/Sidewalk.jpg"
+    st_dev = 2053
+    st_ino = 1968686
+    st_mode = 0100775
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 2388720
+    st_blksize = 4096
+    st_blocks = 4672
+    st_atime = 0x4f9de36e
+    st_mtime = 0x4f999f22
+    st_ctime = 0x4f999f22
+
+bb_getattr(path="/2012/bridge.jpg", statbuf=0xb77731b0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: bridge.jpg
+
+Fixed Path: /2012/bridge.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/2012/bridge.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/bridge.jpg"
+    st_dev = 2053
+    st_ino = 1968705
+    st_mode = 0100775
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 2328028
+    st_blksize = 4096
+    st_blocks = 4552
+    st_atime = 0x4f9de36d
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/2012/Sunny.jpg", statbuf=0xb6f501b0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: Sunny.jpg
+
+Fixed Path: /2012/Sunny.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/2012/Sunny.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/Sunny.jpg"
+    st_dev = 2053
+    st_ino = 1968693
+    st_mode = 0100775
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 2450914
+    st_blksize = 4096
+    st_blocks = 4792
+    st_atime = 0x4f9de36e
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/2012/IHOP.jpg", statbuf=0xb77731b0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: IHOP.jpg
+
+Fixed Path: /2012/IHOP.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/2012/IHOP.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/IHOP.jpg"
+    st_dev = 2053
+    st_ino = 1968710
+    st_mode = 0100775
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 2470785
+    st_blksize = 4096
+    st_blocks = 4832
+    st_atime = 0x4f9de36d
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/2012/hello.txt", statbuf=0xb6f501b0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: hello.txt
+
+Fixed Path: /2012/hello.txt/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/2012/hello.txt", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/hello.txt"
+    st_dev = 2053
+    st_ino = 1968685
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 7
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x4f9de36d
+    st_mtime = 0x4f999f22
+    st_ctime = 0x4f999f22
+
+bb_getattr(path="/2012/mozilla.pdf", statbuf=0xb77731b0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: 
+
+Fixed Path: /2012/mozilla.pdf/, Year: 112, Month: -1, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/2012/mozilla.pdf", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/mozilla.pdf"
+    st_dev = 2053
+    st_ino = 1968683
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 73210
+    st_blksize = 4096
+    st_blocks = 144
+    st_atime = 0x4f9de36e
+    st_mtime = 0x4f999f22
+    st_ctime = 0x4f999f22
+
+bb_getattr(path="/2012/Phillip Wilkerson - Another Light.mp3", statbuf=0xb6f501b0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: 
+
+Fixed Path: /2012/Phillip Wilkerson - Another Light.mp3/, Year: 112, Month: -1, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/2012/Phillip Wilkerson - Another Light.mp3", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/Phillip Wilkerson - Another Light.mp3"
+First part of path: 2012/Phillip Wilkerson 
+Second part of path:  Another Light.mp3
+    st_dev = 2053
+    st_ino = 1968688
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 8665740
+    st_blksize = 4096
+    st_blocks = 16928
+    st_atime = 0x4f9de36f
+    st_mtime = 0x4f999f22
+    st_ctime = 0x4f999f22
+
+bb_getattr(path="/2012/cover.jpg", statbuf=0xb77731b0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: cover.jpg
+
+Fixed Path: /2012/cover.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/2012/cover.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/cover.jpg"
+    st_dev = 2053
+    st_ino = 1968695
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 15758
+    st_blksize = 4096
+    st_blocks = 32
+    st_atime = 0x4f9de36d
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/2012/Devos_SLT.html", statbuf=0xb6f501b0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: 
+
+Fixed Path: /2012/Devos_SLT.html/, Year: 112, Month: -1, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/2012/Devos_SLT.html", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/Devos_SLT.html"
+    st_dev = 2053
+    st_ino = 1968701
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 19471
+    st_blksize = 4096
+    st_blocks = 40
+    st_atime = 0x4f9de36d
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/2012/index.html", statbuf=0xb77731b0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: index.html
+
+Fixed Path: /2012/index.html/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/2012/index.html", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/index.html"
+    st_dev = 2053
+    st_ino = 1968704
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 5074
+    st_blksize = 4096
+    st_blocks = 16
+    st_atime = 0x4f9de36f
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/2012/How fast.ogg", statbuf=0xb6f501b0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: 
+
+Fixed Path: /2012/How fast.ogg/, Year: 112, Month: -1, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/2012/How fast.ogg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/How fast.ogg"
+    st_dev = 2053
+    st_ino = 1968690
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 1915873
+    st_blksize = 4096
+    st_blocks = 3744
+    st_atime = 0x4f9de36f
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/2012/Andrew Martin resume.txt", statbuf=0xb77731b0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: 
+
+Fixed Path: /2012/Andrew Martin resume.txt/, Year: 112, Month: -1, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/2012/Andrew Martin resume.txt", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/Andrew Martin resume.txt"
+    st_dev = 2053
+    st_ino = 1968692
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 1741
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x4f9de36f
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/2012/travel_0011.jpg", statbuf=0xb6f501b0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: 
+
+Fixed Path: /2012/travel_0011.jpg/, Year: 112, Month: -1, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/2012/travel_0011.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/travel_0011.jpg"
+    st_dev = 2053
+    st_ino = 1968706
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 318399
+    st_blksize = 4096
+    st_blocks = 624
+    st_atime = 0x4f9de36f
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_releasedir(path="/2012", fi=0xb6f501e0)
+    flags = 0x00000000
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000000
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/2012", statbuf=0xb77731b0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: 
+
+Fixed Path: /2012/, Year: 112, Month: -1, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/2012", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/2012"
+
+Indiced Diff: 0
+
+Fixed Path: //, Year: 0, Month: 0, Day: 0
+	ERROR bb_getattr lstat: Invalid argument
+
+bb_access(path="/", mask=02)
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/"
+
+bb_getattr(path="/", statbuf=0xb77731a0)
+
+Indiced Diff: 0
+
+Fixed Path: //, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/"
+    st_dev = 2053
+    st_ino = 1966038
+    st_mode = 040775
+    st_nlink = 4
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x4f9de256
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/.Trash", statbuf=0xb6f501b0)
+
+Indiced Diff: 6
+
+Fixed Path: /.Trash/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/.Trash", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/.Trash"
+	ERROR bb_getattr lstat: No such file or directory
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+bb_getattr(path="/.Trash-1000", statbuf=0xb77731b0)
+
+Indiced Diff: 11
+
+Fixed Path: /.Trash-1000/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/.Trash-1000", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/.Trash-1000"
+	ERROR bb_getattr lstat: No such file or directory
+    st_dev = 0
+    st_ino = 0
+    st_mode = 00
+    st_nlink = 0
+    st_uid = 0
+    st_gid = 0
+    st_rdev = 0
+    st_size = 0
+    st_blksize = 0
+    st_blocks = 0
+    st_atime = 0x00000000
+    st_mtime = 0x00000000
+    st_ctime = 0x00000000
+
+Indiced Diff: 0
+
+Fixed Path: //, Year: 0, Month: 0, Day: 0
+	ERROR bb_getattr lstat: No such file or directory
+
+bb_access(path="/", mask=02)
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/"
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: 
+
+Fixed Path: /2012/, Year: 112, Month: -1, Day: 0
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: 
+
+Fixed Path: /2012/, Year: 112, Month: -1, Day: 0
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: 
+
+Fixed Path: /2012/, Year: 112, Month: -1, Day: 0
+
+bb_getattr(path="/", statbuf=0xb6f501a0)
+
+Indiced Diff: 0
+
+Fixed Path: //, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/"
+    st_dev = 2053
+    st_ino = 1966038
+    st_mode = 040775
+    st_nlink = 4
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x4f9de256
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/2012", statbuf=0xb77731b0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: 
+
+Fixed Path: /2012/, Year: 112, Month: -1, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/2012", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/2012"
+
+Indiced Diff: 0
+
+Fixed Path: //, Year: 0, Month: 0, Day: 0
+	ERROR bb_getattr lstat: No such file or directory
+
+bb_access(path="/", mask=01)
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/"
+
+Root node start time 1335390988
+
+Start Name: kodak-dc240.jpg
+
+End Name: travel_0011.jpg
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseAndFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseAndFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+
+bb_getattr(path="/1975", statbuf=0xb77731b0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: 
+
+Fixed Path: /1975/, Year: 75, Month: -1, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/1975", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/1975"
+
+bb_getattr(path="/1998", statbuf=0xb6f501b0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: 
+
+Fixed Path: /1998/, Year: 98, Month: -1, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/1998", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/1998"
+
+bb_getattr(path="/2000", statbuf=0xb77731b0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: 
+
+Fixed Path: /2000/, Year: 100, Month: -1, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/2000", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/2000"
+
+bb_getattr(path="/2001", statbuf=0xb6f501b0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: 
+
+Fixed Path: /2001/, Year: 101, Month: -1, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/2001", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/2001"
+
+bb_getattr(path="/2007", statbuf=0xb77731b0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: 
+
+Fixed Path: /2007/, Year: 107, Month: -1, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/2007", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/2007"
+
+bb_getattr(path="/2012", statbuf=0xb6f501b0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: 
+
+Fixed Path: /2012/, Year: 112, Month: -1, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/2012", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/2012"
+
+bb_getattr(path="/kodak-dc240.jpg", statbuf=0xb77731b0)
+
+Indiced Diff: 15
+
+Fixed Path: /kodak-dc240.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/kodak-dc240.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/kodak-dc240.jpg"
+First part of path: kodak
+Second part of path: dc240.jpg
+    st_dev = 2053
+    st_ino = 1968687
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 81901
+    st_blksize = 4096
+    st_blocks = 160
+    st_atime = 0x4f9de36d
+    st_mtime = 0x4f999f22
+    st_ctime = 0x4f999f22
+
+bb_getattr(path="/ricoh-rdc5300.jpg", statbuf=0xb6f501b0)
+
+Indiced Diff: 17
+
+Fixed Path: /ricoh-rdc5300.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/ricoh-rdc5300.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/ricoh-rdc5300.jpg"
+First part of path: ricoh
+Second part of path: rdc5300.jpg
+    st_dev = 2053
+    st_ino = 1968698
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 87626
+    st_blksize = 4096
+    st_blocks = 176
+    st_atime = 0x4f9de36f
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/kodak-dc210.jpg", statbuf=0xb77731b0)
+
+Indiced Diff: 15
+
+Fixed Path: /kodak-dc210.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/kodak-dc210.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/kodak-dc210.jpg"
+First part of path: kodak
+Second part of path: dc210.jpg
+    st_dev = 2053
+    st_ino = 1968684
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 79837
+    st_blksize = 4096
+    st_blocks = 160
+    st_atime = 0x4f9de36f
+    st_mtime = 0x4f999f22
+    st_ctime = 0x4f999f22
+
+bb_getattr(path="/sanyo-vpcg250.jpg", statbuf=0xb6f501b0)
+
+Indiced Diff: 17
+
+Fixed Path: /sanyo-vpcg250.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/sanyo-vpcg250.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/sanyo-vpcg250.jpg"
+First part of path: sanyo
+Second part of path: vpcg250.jpg
+    st_dev = 2053
+    st_ino = 1968694
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 62096
+    st_blksize = 4096
+    st_blocks = 128
+    st_atime = 0x4f9de36e
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/sony-d700.jpg", statbuf=0xb77731b0)
+
+Indiced Diff: 13
+
+Fixed Path: /sony-d700.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/sony-d700.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/sony-d700.jpg"
+First part of path: sony
+Second part of path: d700.jpg
+    st_dev = 2053
+    st_ino = 1968682
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 79446
+    st_blksize = 4096
+    st_blocks = 160
+    st_atime = 0x4f9de36e
+    st_mtime = 0x4f999f22
+    st_ctime = 0x4f999f22
+
+bb_getattr(path="/fujifilm-finepix40i.jpg", statbuf=0xb6f501b0)
+
+Indiced Diff: 23
+
+Fixed Path: /fujifilm-finepix40i.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/fujifilm-finepix40i.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/fujifilm-finepix40i.jpg"
+First part of path: fujifilm
+Second part of path: finepix40i.jpg
+    st_dev = 2053
+    st_ino = 1968697
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 43183
+    st_blksize = 4096
+    st_blocks = 88
+    st_atime = 0x4f9de36f
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/fujifilm-mx1700.jpg", statbuf=0xb77731b0)
+
+Indiced Diff: 19
+
+Fixed Path: /fujifilm-mx1700.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/fujifilm-mx1700.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/fujifilm-mx1700.jpg"
+First part of path: fujifilm
+Second part of path: mx1700.jpg
+    st_dev = 2053
+    st_ino = 1968709
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 100227
+    st_blksize = 4096
+    st_blocks = 200
+    st_atime = 0x4f9de36d
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/sony-cybershot.jpg", statbuf=0xb6f501b0)
+
+Indiced Diff: 18
+
+Fixed Path: /sony-cybershot.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/sony-cybershot.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/sony-cybershot.jpg"
+First part of path: sony
+Second part of path: cybershot.jpg
+    st_dev = 2053
+    st_ino = 1968703
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 63643
+    st_blksize = 4096
+    st_blocks = 128
+    st_atime = 0x4f9de36f
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/olympus-c960.jpg", statbuf=0xb77731b0)
+
+Indiced Diff: 16
+
+Fixed Path: /olympus-c960.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/olympus-c960.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/olympus-c960.jpg"
+First part of path: olympus
+Second part of path: c960.jpg
+    st_dev = 2053
+    st_ino = 1968702
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 87599
+    st_blksize = 4096
+    st_blocks = 176
+    st_atime = 0x4f9de36d
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/sanyo-vpcsx550.jpg", statbuf=0xb6f501b0)
+
+Indiced Diff: 18
+
+Fixed Path: /sanyo-vpcsx550.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/sanyo-vpcsx550.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/sanyo-vpcsx550.jpg"
+First part of path: sanyo
+Second part of path: vpcsx550.jpg
+    st_dev = 2053
+    st_ino = 1968699
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 102448
+    st_blksize = 4096
+    st_blocks = 208
+    st_atime = 0x4f9de36d
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/nikon-e950.jpg", statbuf=0xb77731b0)
+
+Indiced Diff: 14
+
+Fixed Path: /nikon-e950.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/nikon-e950.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/nikon-e950.jpg"
+First part of path: nikon
+Second part of path: e950.jpg
+    st_dev = 2053
+    st_ino = 1968707
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 164151
+    st_blksize = 4096
+    st_blocks = 328
+    st_atime = 0x4f9de36f
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/fujifilm-dx10.jpg", statbuf=0xb6f501b0)
+
+Indiced Diff: 17
+
+Fixed Path: /fujifilm-dx10.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/fujifilm-dx10.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/fujifilm-dx10.jpg"
+First part of path: fujifilm
+Second part of path: dx10.jpg
+    st_dev = 2053
+    st_ino = 1968696
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 133074
+    st_blksize = 4096
+    st_blocks = 264
+    st_atime = 0x4f9de36f
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/canon-ixus.jpg", statbuf=0xb77731b0)
+
+Indiced Diff: 14
+
+Fixed Path: /canon-ixus.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/canon-ixus.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/canon-ixus.jpg"
+First part of path: canon
+Second part of path: ixus.jpg
+    st_dev = 2053
+    st_ino = 1968700
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 128037
+    st_blksize = 4096
+    st_blocks = 256
+    st_atime = 0x4f9de36f
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/travel_0012.jpg", statbuf=0xb6f501b0)
+
+Indiced Diff: 15
+
+Fixed Path: /travel_0012.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/travel_0012.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/travel_0012.jpg"
+    st_dev = 2053
+    st_ino = 1968708
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 540389
+    st_blksize = 4096
+    st_blocks = 1056
+    st_atime = 0x4f9de36d
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/Cool Building.jpg", statbuf=0xb77731b0)
+
+Indiced Diff: 17
+
+Fixed Path: /Cool Building.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/Cool Building.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/Cool Building.jpg"
+    st_dev = 2053
+    st_ino = 1968691
+    st_mode = 0100775
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 2015573
+    st_blksize = 4096
+    st_blocks = 3944
+    st_atime = 0x4f9de36e
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/In Traffic.jpg", statbuf=0xb6f501b0)
+
+Indiced Diff: 14
+
+Fixed Path: /In Traffic.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/In Traffic.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/In Traffic.jpg"
+    st_dev = 2053
+    st_ino = 1968689
+    st_mode = 0100775
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 2550810
+    st_blksize = 4096
+    st_blocks = 4984
+    st_atime = 0x4f9de36f
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/Sidewalk.jpg", statbuf=0xb77731b0)
+
+Indiced Diff: 12
+
+Fixed Path: /Sidewalk.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/Sidewalk.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/Sidewalk.jpg"
+    st_dev = 2053
+    st_ino = 1968686
+    st_mode = 0100775
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 2388720
+    st_blksize = 4096
+    st_blocks = 4672
+    st_atime = 0x4f9de36e
+    st_mtime = 0x4f999f22
+    st_ctime = 0x4f999f22
+
+bb_getattr(path="/bridge.jpg", statbuf=0xb6f501b0)
+
+Indiced Diff: 10
+
+Fixed Path: /bridge.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/bridge.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/bridge.jpg"
+    st_dev = 2053
+    st_ino = 1968705
+    st_mode = 0100775
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 2328028
+    st_blksize = 4096
+    st_blocks = 4552
+    st_atime = 0x4f9de36d
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/Sunny.jpg", statbuf=0xb77731b0)
+
+Indiced Diff: 9
+
+Fixed Path: /Sunny.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/Sunny.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/Sunny.jpg"
+    st_dev = 2053
+    st_ino = 1968693
+    st_mode = 0100775
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 2450914
+    st_blksize = 4096
+    st_blocks = 4792
+    st_atime = 0x4f9de36e
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/IHOP.jpg", statbuf=0xb6f501b0)
+
+Indiced Diff: 8
+
+Fixed Path: /IHOP.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/IHOP.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/IHOP.jpg"
+    st_dev = 2053
+    st_ino = 1968710
+    st_mode = 0100775
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 2470785
+    st_blksize = 4096
+    st_blocks = 4832
+    st_atime = 0x4f9de36d
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/hello.txt", statbuf=0xb77731b0)
+
+Indiced Diff: 9
+
+Fixed Path: /hello.txt/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/hello.txt", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/hello.txt"
+    st_dev = 2053
+    st_ino = 1968685
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 7
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x4f9de36d
+    st_mtime = 0x4f999f22
+    st_ctime = 0x4f999f22
+
+bb_getattr(path="/mozilla.pdf", statbuf=0xb6f501b0)
+
+Indiced Diff: 11
+
+Fixed Path: /mozilla.pdf/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/mozilla.pdf", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/mozilla.pdf"
+    st_dev = 2053
+    st_ino = 1968683
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 73210
+    st_blksize = 4096
+    st_blocks = 144
+    st_atime = 0x4f9de36e
+    st_mtime = 0x4f999f22
+    st_ctime = 0x4f999f22
+
+bb_getattr(path="/Phillip Wilkerson - Another Light.mp3", statbuf=0xb77731b0)
+
+Indiced Diff: 37
+
+Fixed Path: /Phillip Wilkerson - Another Light.mp3/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/Phillip Wilkerson - Another Light.mp3", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/Phillip Wilkerson - Another Light.mp3"
+First part of path: Phillip Wilkerson 
+Second part of path:  Another Light.mp3
+    st_dev = 2053
+    st_ino = 1968688
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 8665740
+    st_blksize = 4096
+    st_blocks = 16928
+    st_atime = 0x4f9de36f
+    st_mtime = 0x4f999f22
+    st_ctime = 0x4f999f22
+
+bb_getattr(path="/cover.jpg", statbuf=0xb6f501b0)
+
+Indiced Diff: 9
+
+Fixed Path: /cover.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/cover.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/cover.jpg"
+    st_dev = 2053
+    st_ino = 1968695
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 15758
+    st_blksize = 4096
+    st_blocks = 32
+    st_atime = 0x4f9de36d
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/Devos_SLT.html", statbuf=0xb77731b0)
+
+Indiced Diff: 14
+
+Fixed Path: /Devos_SLT.html/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/Devos_SLT.html", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/Devos_SLT.html"
+    st_dev = 2053
+    st_ino = 1968701
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 19471
+    st_blksize = 4096
+    st_blocks = 40
+    st_atime = 0x4f9de36d
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/index.html", statbuf=0xb6f501b0)
+
+Indiced Diff: 10
+
+Fixed Path: /index.html/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/index.html", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/index.html"
+    st_dev = 2053
+    st_ino = 1968704
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 5074
+    st_blksize = 4096
+    st_blocks = 16
+    st_atime = 0x4f9de36f
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/How fast.ogg", statbuf=0xb77731b0)
+
+Indiced Diff: 12
+
+Fixed Path: /How fast.ogg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/How fast.ogg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/How fast.ogg"
+    st_dev = 2053
+    st_ino = 1968690
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 1915873
+    st_blksize = 4096
+    st_blocks = 3744
+    st_atime = 0x4f9de36f
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/Andrew Martin resume.txt", statbuf=0xb6f501b0)
+
+Indiced Diff: 24
+
+Fixed Path: /Andrew Martin resume.txt/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/Andrew Martin resume.txt", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/Andrew Martin resume.txt"
+    st_dev = 2053
+    st_ino = 1968692
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 1741
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x4f9de36f
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/travel_0011.jpg", statbuf=0xb77731b0)
+
+Indiced Diff: 15
+
+Fixed Path: /travel_0011.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/travel_0011.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/travel_0011.jpg"
+    st_dev = 2053
+    st_ino = 1968706
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 318399
+    st_blksize = 4096
+    st_blocks = 624
+    st_atime = 0x4f9de36f
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_releasedir(path="/", fi=0xb77731e0)
+    flags = 0x00000000
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000000
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0xb6f501a0)
+
+Indiced Diff: 0
+
+Fixed Path: //, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/"
+    st_dev = 2053
+    st_ino = 1966038
+    st_mode = 040775
+    st_nlink = 4
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x4f9de256
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/1975", statbuf=0xb77731b0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: 
+
+Fixed Path: /1975/, Year: 75, Month: -1, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/1975", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/1975"
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: 
+
+Fixed Path: /1975/, Year: 75, Month: -1, Day: 0
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: 
+
+Fixed Path: /1975/, Year: 75, Month: -1, Day: 0
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: 
+
+Fixed Path: /1975/, Year: 75, Month: -1, Day: 0
+
+Start Time: 157784400
+
+End Time: 189320400
+
+Root node start time 1335390988
+
+Start Name: kodak-dc240.jpg
+
+End Name: kodak-dc210.jpg
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+
+bb_getattr(path="/1975/feb", statbuf=0xb77731b0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: feb
+
+Fixed Path: /1975/feb/, Year: 75, Month: 1, Day: -1
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/1975/feb", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/feb"
+
+bb_getattr(path="/1975/kodak-dc240.jpg", statbuf=0xb6f501b0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: 
+
+Fixed Path: /1975/kodak-dc240.jpg/, Year: 75, Month: -1, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/1975/kodak-dc240.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/kodak-dc240.jpg"
+First part of path: 1975/kodak
+Second part of path: dc240.jpg
+    st_dev = 2053
+    st_ino = 1968687
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 81901
+    st_blksize = 4096
+    st_blocks = 160
+    st_atime = 0x4f9de36d
+    st_mtime = 0x4f999f22
+    st_ctime = 0x4f999f22
+
+bb_getattr(path="/1975/ricoh-rdc5300.jpg", statbuf=0xb77731b0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: 
+
+Fixed Path: /1975/ricoh-rdc5300.jpg/, Year: 75, Month: -1, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/1975/ricoh-rdc5300.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/ricoh-rdc5300.jpg"
+First part of path: 1975/ricoh
+Second part of path: rdc5300.jpg
+    st_dev = 2053
+    st_ino = 1968698
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 87626
+    st_blksize = 4096
+    st_blocks = 176
+    st_atime = 0x4f9de36f
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/1975/kodak-dc210.jpg", statbuf=0xb6f501b0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: 
+
+Fixed Path: /1975/kodak-dc210.jpg/, Year: 75, Month: -1, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/1975/kodak-dc210.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/kodak-dc210.jpg"
+First part of path: 1975/kodak
+Second part of path: dc210.jpg
+    st_dev = 2053
+    st_ino = 1968684
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 79837
+    st_blksize = 4096
+    st_blocks = 160
+    st_atime = 0x4f9de36f
+    st_mtime = 0x4f999f22
+    st_ctime = 0x4f999f22
+
+bb_releasedir(path="/1975", fi=0xb6f501e0)
+    flags = 0x00000000
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000000
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0xb77731a0)
+
+Indiced Diff: 0
+
+Fixed Path: //, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/"
+    st_dev = 2053
+    st_ino = 1966038
+    st_mode = 040775
+    st_nlink = 4
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x4f9de256
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/1975", statbuf=0xb6f501b0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: 
+
+Fixed Path: /1975/, Year: 75, Month: -1, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/1975", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/1975"
+
+Indiced Diff: 0
+
+Fixed Path: //, Year: 0, Month: 0, Day: 0
+	ERROR bb_getattr lstat: No such file or directory
+
+bb_access(path="/", mask=01)
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/"
+
+Root node start time 1335390988
+
+Start Name: kodak-dc240.jpg
+
+End Name: travel_0011.jpg
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseAndFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseAndFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+
+bb_getattr(path="/1998", statbuf=0xb6f501b0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: 
+
+Fixed Path: /1998/, Year: 98, Month: -1, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/1998", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/1998"
+
+bb_getattr(path="/2000", statbuf=0xb77731b0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: 
+
+Fixed Path: /2000/, Year: 100, Month: -1, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/2000", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/2000"
+
+bb_getattr(path="/2001", statbuf=0xb6f501b0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: 
+
+Fixed Path: /2001/, Year: 101, Month: -1, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/2001", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/2001"
+
+bb_getattr(path="/2007", statbuf=0xb77731b0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: 
+
+Fixed Path: /2007/, Year: 107, Month: -1, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/2007", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/2007"
+
+bb_getattr(path="/2012", statbuf=0xb6f501b0)
+
+Indiced Diff: 4
+
+Year is good
+
+Month string: 
+
+Fixed Path: /2012/, Year: 112, Month: -1, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/2012", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/2012"
+
+bb_getattr(path="/kodak-dc240.jpg", statbuf=0xb77731b0)
+
+Indiced Diff: 15
+
+Fixed Path: /kodak-dc240.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/kodak-dc240.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/kodak-dc240.jpg"
+First part of path: kodak
+Second part of path: dc240.jpg
+    st_dev = 2053
+    st_ino = 1968687
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 81901
+    st_blksize = 4096
+    st_blocks = 160
+    st_atime = 0x4f9de36d
+    st_mtime = 0x4f999f22
+    st_ctime = 0x4f999f22
+
+bb_getattr(path="/ricoh-rdc5300.jpg", statbuf=0xb6f501b0)
+
+Indiced Diff: 17
+
+Fixed Path: /ricoh-rdc5300.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/ricoh-rdc5300.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/ricoh-rdc5300.jpg"
+First part of path: ricoh
+Second part of path: rdc5300.jpg
+    st_dev = 2053
+    st_ino = 1968698
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 87626
+    st_blksize = 4096
+    st_blocks = 176
+    st_atime = 0x4f9de36f
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/kodak-dc210.jpg", statbuf=0xb77731b0)
+
+Indiced Diff: 15
+
+Fixed Path: /kodak-dc210.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/kodak-dc210.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/kodak-dc210.jpg"
+First part of path: kodak
+Second part of path: dc210.jpg
+    st_dev = 2053
+    st_ino = 1968684
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 79837
+    st_blksize = 4096
+    st_blocks = 160
+    st_atime = 0x4f9de36f
+    st_mtime = 0x4f999f22
+    st_ctime = 0x4f999f22
+
+bb_getattr(path="/sanyo-vpcg250.jpg", statbuf=0xb6f501b0)
+
+Indiced Diff: 17
+
+Fixed Path: /sanyo-vpcg250.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/sanyo-vpcg250.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/sanyo-vpcg250.jpg"
+First part of path: sanyo
+Second part of path: vpcg250.jpg
+    st_dev = 2053
+    st_ino = 1968694
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 62096
+    st_blksize = 4096
+    st_blocks = 128
+    st_atime = 0x4f9de36e
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/sony-d700.jpg", statbuf=0xb77731b0)
+
+Indiced Diff: 13
+
+Fixed Path: /sony-d700.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/sony-d700.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/sony-d700.jpg"
+First part of path: sony
+Second part of path: d700.jpg
+    st_dev = 2053
+    st_ino = 1968682
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 79446
+    st_blksize = 4096
+    st_blocks = 160
+    st_atime = 0x4f9de36e
+    st_mtime = 0x4f999f22
+    st_ctime = 0x4f999f22
+
+bb_getattr(path="/fujifilm-finepix40i.jpg", statbuf=0xb6f501b0)
+
+Indiced Diff: 23
+
+Fixed Path: /fujifilm-finepix40i.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/fujifilm-finepix40i.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/fujifilm-finepix40i.jpg"
+First part of path: fujifilm
+Second part of path: finepix40i.jpg
+    st_dev = 2053
+    st_ino = 1968697
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 43183
+    st_blksize = 4096
+    st_blocks = 88
+    st_atime = 0x4f9de36f
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/fujifilm-mx1700.jpg", statbuf=0xb77731b0)
+
+Indiced Diff: 19
+
+Fixed Path: /fujifilm-mx1700.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/fujifilm-mx1700.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/fujifilm-mx1700.jpg"
+First part of path: fujifilm
+Second part of path: mx1700.jpg
+    st_dev = 2053
+    st_ino = 1968709
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 100227
+    st_blksize = 4096
+    st_blocks = 200
+    st_atime = 0x4f9de36d
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/sony-cybershot.jpg", statbuf=0xb6f501b0)
+
+Indiced Diff: 18
+
+Fixed Path: /sony-cybershot.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/sony-cybershot.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/sony-cybershot.jpg"
+First part of path: sony
+Second part of path: cybershot.jpg
+    st_dev = 2053
+    st_ino = 1968703
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 63643
+    st_blksize = 4096
+    st_blocks = 128
+    st_atime = 0x4f9de36f
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/olympus-c960.jpg", statbuf=0xb77731b0)
+
+Indiced Diff: 16
+
+Fixed Path: /olympus-c960.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/olympus-c960.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/olympus-c960.jpg"
+First part of path: olympus
+Second part of path: c960.jpg
+    st_dev = 2053
+    st_ino = 1968702
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 87599
+    st_blksize = 4096
+    st_blocks = 176
+    st_atime = 0x4f9de36d
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/sanyo-vpcsx550.jpg", statbuf=0xb6f501b0)
+
+Indiced Diff: 18
+
+Fixed Path: /sanyo-vpcsx550.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/sanyo-vpcsx550.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/sanyo-vpcsx550.jpg"
+First part of path: sanyo
+Second part of path: vpcsx550.jpg
+    st_dev = 2053
+    st_ino = 1968699
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 102448
+    st_blksize = 4096
+    st_blocks = 208
+    st_atime = 0x4f9de36d
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/nikon-e950.jpg", statbuf=0xb77731b0)
+
+Indiced Diff: 14
+
+Fixed Path: /nikon-e950.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/nikon-e950.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/nikon-e950.jpg"
+First part of path: nikon
+Second part of path: e950.jpg
+    st_dev = 2053
+    st_ino = 1968707
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 164151
+    st_blksize = 4096
+    st_blocks = 328
+    st_atime = 0x4f9de36f
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/fujifilm-dx10.jpg", statbuf=0xb6f501b0)
+
+Indiced Diff: 17
+
+Fixed Path: /fujifilm-dx10.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/fujifilm-dx10.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/fujifilm-dx10.jpg"
+First part of path: fujifilm
+Second part of path: dx10.jpg
+    st_dev = 2053
+    st_ino = 1968696
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 133074
+    st_blksize = 4096
+    st_blocks = 264
+    st_atime = 0x4f9de36f
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/canon-ixus.jpg", statbuf=0xb77731b0)
+
+Indiced Diff: 14
+
+Fixed Path: /canon-ixus.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/canon-ixus.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/canon-ixus.jpg"
+First part of path: canon
+Second part of path: ixus.jpg
+    st_dev = 2053
+    st_ino = 1968700
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 128037
+    st_blksize = 4096
+    st_blocks = 256
+    st_atime = 0x4f9de36f
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/travel_0012.jpg", statbuf=0xb6f501b0)
+
+Indiced Diff: 15
+
+Fixed Path: /travel_0012.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/travel_0012.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/travel_0012.jpg"
+    st_dev = 2053
+    st_ino = 1968708
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 540389
+    st_blksize = 4096
+    st_blocks = 1056
+    st_atime = 0x4f9de36d
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/Cool Building.jpg", statbuf=0xb77731b0)
+
+Indiced Diff: 17
+
+Fixed Path: /Cool Building.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/Cool Building.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/Cool Building.jpg"
+    st_dev = 2053
+    st_ino = 1968691
+    st_mode = 0100775
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 2015573
+    st_blksize = 4096
+    st_blocks = 3944
+    st_atime = 0x4f9de36e
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/In Traffic.jpg", statbuf=0xb6f501b0)
+
+Indiced Diff: 14
+
+Fixed Path: /In Traffic.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/In Traffic.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/In Traffic.jpg"
+    st_dev = 2053
+    st_ino = 1968689
+    st_mode = 0100775
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 2550810
+    st_blksize = 4096
+    st_blocks = 4984
+    st_atime = 0x4f9de36f
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/Sidewalk.jpg", statbuf=0xb77731b0)
+
+Indiced Diff: 12
+
+Fixed Path: /Sidewalk.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/Sidewalk.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/Sidewalk.jpg"
+    st_dev = 2053
+    st_ino = 1968686
+    st_mode = 0100775
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 2388720
+    st_blksize = 4096
+    st_blocks = 4672
+    st_atime = 0x4f9de36e
+    st_mtime = 0x4f999f22
+    st_ctime = 0x4f999f22
+
+bb_getattr(path="/bridge.jpg", statbuf=0xb77731b0)
+
+Indiced Diff: 10
+
+Fixed Path: /bridge.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/bridge.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/bridge.jpg"
+    st_dev = 2053
+    st_ino = 1968705
+    st_mode = 0100775
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 2328028
+    st_blksize = 4096
+    st_blocks = 4552
+    st_atime = 0x4f9de36d
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/Sunny.jpg", statbuf=0xb6f501b0)
+
+Indiced Diff: 9
+
+Fixed Path: /Sunny.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/Sunny.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/Sunny.jpg"
+    st_dev = 2053
+    st_ino = 1968693
+    st_mode = 0100775
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 2450914
+    st_blksize = 4096
+    st_blocks = 4792
+    st_atime = 0x4f9de36e
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/IHOP.jpg", statbuf=0xb77731b0)
+
+Indiced Diff: 8
+
+Fixed Path: /IHOP.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/IHOP.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/IHOP.jpg"
+    st_dev = 2053
+    st_ino = 1968710
+    st_mode = 0100775
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 2470785
+    st_blksize = 4096
+    st_blocks = 4832
+    st_atime = 0x4f9de36d
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/hello.txt", statbuf=0xb6f501b0)
+
+Indiced Diff: 9
+
+Fixed Path: /hello.txt/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/hello.txt", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/hello.txt"
+    st_dev = 2053
+    st_ino = 1968685
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 7
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x4f9de36d
+    st_mtime = 0x4f999f22
+    st_ctime = 0x4f999f22
+
+bb_getattr(path="/mozilla.pdf", statbuf=0xb77731b0)
+
+Indiced Diff: 11
+
+Fixed Path: /mozilla.pdf/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/mozilla.pdf", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/mozilla.pdf"
+    st_dev = 2053
+    st_ino = 1968683
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 73210
+    st_blksize = 4096
+    st_blocks = 144
+    st_atime = 0x4f9de36e
+    st_mtime = 0x4f999f22
+    st_ctime = 0x4f999f22
+
+bb_getattr(path="/Phillip Wilkerson - Another Light.mp3", statbuf=0xb6f501b0)
+
+Indiced Diff: 37
+
+Fixed Path: /Phillip Wilkerson - Another Light.mp3/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/Phillip Wilkerson - Another Light.mp3", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/Phillip Wilkerson - Another Light.mp3"
+First part of path: Phillip Wilkerson 
+Second part of path:  Another Light.mp3
+    st_dev = 2053
+    st_ino = 1968688
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 8665740
+    st_blksize = 4096
+    st_blocks = 16928
+    st_atime = 0x4f9de36f
+    st_mtime = 0x4f999f22
+    st_ctime = 0x4f999f22
+
+bb_getattr(path="/cover.jpg", statbuf=0xb77731b0)
+
+Indiced Diff: 9
+
+Fixed Path: /cover.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/cover.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/cover.jpg"
+    st_dev = 2053
+    st_ino = 1968695
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 15758
+    st_blksize = 4096
+    st_blocks = 32
+    st_atime = 0x4f9de36d
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/Devos_SLT.html", statbuf=0xb6f501b0)
+
+Indiced Diff: 14
+
+Fixed Path: /Devos_SLT.html/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/Devos_SLT.html", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/Devos_SLT.html"
+    st_dev = 2053
+    st_ino = 1968701
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 19471
+    st_blksize = 4096
+    st_blocks = 40
+    st_atime = 0x4f9de36d
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/index.html", statbuf=0xb77731b0)
+
+Indiced Diff: 10
+
+Fixed Path: /index.html/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/index.html", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/index.html"
+    st_dev = 2053
+    st_ino = 1968704
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 5074
+    st_blksize = 4096
+    st_blocks = 16
+    st_atime = 0x4f9de36f
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/How fast.ogg", statbuf=0xb6f501b0)
+
+Indiced Diff: 12
+
+Fixed Path: /How fast.ogg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/How fast.ogg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/How fast.ogg"
+    st_dev = 2053
+    st_ino = 1968690
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 1915873
+    st_blksize = 4096
+    st_blocks = 3744
+    st_atime = 0x4f9de36f
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/Andrew Martin resume.txt", statbuf=0xb77731b0)
+
+Indiced Diff: 24
+
+Fixed Path: /Andrew Martin resume.txt/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/Andrew Martin resume.txt", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/Andrew Martin resume.txt"
+    st_dev = 2053
+    st_ino = 1968692
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 1741
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x4f9de36f
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/travel_0011.jpg", statbuf=0xb6f501b0)
+
+Indiced Diff: 15
+
+Fixed Path: /travel_0011.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/travel_0011.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/travel_0011.jpg"
+    st_dev = 2053
+    st_ino = 1968706
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 318399
+    st_blksize = 4096
+    st_blocks = 624
+    st_atime = 0x4f9de36f
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_releasedir(path="/", fi=0xb6f501e0)
+    flags = 0x00000000
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000000
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/2010:03:03-2012:01:02", statbuf=0xb77731b0)
+
+Indiced Diff: 21
+
+Fixed Path: /2010:03:03-2012:01:02/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/2010:03:03-2012:01:02", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/2010:03:03-2012:01:02"
+	ERROR bb_getattr lstat: No such file or directory
+First part of path: 2010:03:03
+Second part of path: 2012:01:02
+First part of path: 2010:03:03
+Returning existence
+First part of path: 2010:03:03
+seconds after the minute (0 to 61): 13258740 
+minutes after the hour (0 to 59): 13258740 
+hours since midnight (0 to 23): 222 
+day of the month (1 to 31): 2 
+months since January (0 to 11): 0 
+years since 1900: 112 
+days since Sunday (0 to 6 Sunday=0): 1 
+days since January 1 (0 to 365): 1 
+Daylight Savings Time: 222 
+Second part of path: 2012:01:02
+Performed search from 1267588800 to 1325476800
+
+Root node start time 1335390988
+
+Start Name: Cool Building.jpg
+
+End Name: travel_0012.jpg
+traverseInOrderFillBuffer
+traverseAndFillBuffer
+traverseAndFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+traverseInOrderFillBuffer
+
+bb_getattr(path="/2010:03:03-2012:01:02/Cool Building.jpg", statbuf=0xb6f501b0)
+
+Indiced Diff: 21
+
+Fixed Path: /2010:03:03-2012:01:02/Cool Building.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/2010:03:03-2012:01:02/Cool Building.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/Cool Building.jpg"
+First part of path: 2010:03:03
+Second part of path: 2012:01:02/Cool Building.jpg
+
+bb_getattr(path="/2010:03:03-2012:01:02/In Traffic.jpg", statbuf=0xb77731b0)
+
+Indiced Diff: 21
+
+Fixed Path: /2010:03:03-2012:01:02/In Traffic.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/2010:03:03-2012:01:02/In Traffic.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/In Traffic.jpg"
+First part of path: 2010:03:03
+Second part of path: 2012:01:02/In Traffic.jpg
+
+bb_getattr(path="/2010:03:03-2012:01:02/Sidewalk.jpg", statbuf=0xb6f501b0)
+
+Indiced Diff: 21
+
+Fixed Path: /2010:03:03-2012:01:02/Sidewalk.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/2010:03:03-2012:01:02/Sidewalk.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/Sidewalk.jpg"
+First part of path: 2010:03:03
+Second part of path: 2012:01:02/Sidewalk.jpg
+
+bb_getattr(path="/2010:03:03-2012:01:02/bridge.jpg", statbuf=0xb77731b0)
+
+Indiced Diff: 21
+
+Fixed Path: /2010:03:03-2012:01:02/bridge.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/2010:03:03-2012:01:02/bridge.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/bridge.jpg"
+First part of path: 2010:03:03
+Second part of path: 2012:01:02/bridge.jpg
+
+bb_getattr(path="/2010:03:03-2012:01:02/Sunny.jpg", statbuf=0xb6f501b0)
+
+Indiced Diff: 21
+
+Fixed Path: /2010:03:03-2012:01:02/Sunny.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/2010:03:03-2012:01:02/Sunny.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/Sunny.jpg"
+First part of path: 2010:03:03
+Second part of path: 2012:01:02/Sunny.jpg
+
+bb_getattr(path="/2010:03:03-2012:01:02/IHOP.jpg", statbuf=0xb77731b0)
+
+Indiced Diff: 21
+
+Fixed Path: /2010:03:03-2012:01:02/IHOP.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/2010:03:03-2012:01:02/IHOP.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/IHOP.jpg"
+First part of path: 2010:03:03
+Second part of path: 2012:01:02/IHOP.jpg
+
+bb_getattr(path="/2010:03:03-2012:01:02/hello.txt", statbuf=0xb6f501b0)
+
+Indiced Diff: 21
+
+Fixed Path: /2010:03:03-2012:01:02/hello.txt/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/2010:03:03-2012:01:02/hello.txt", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/hello.txt"
+First part of path: 2010:03:03
+Second part of path: 2012:01:02/hello.txt
+
+bb_getattr(path="/2010:03:03-2012:01:02/mozilla.pdf", statbuf=0xb77731b0)
+
+Indiced Diff: 21
+
+Fixed Path: /2010:03:03-2012:01:02/mozilla.pdf/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/2010:03:03-2012:01:02/mozilla.pdf", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/mozilla.pdf"
+First part of path: 2010:03:03
+Second part of path: 2012:01:02/mozilla.pdf
+
+bb_getattr(path="/2010:03:03-2012:01:02/Phillip Wilkerson - Another Light.mp3", statbuf=0xb6f501b0)
+
+Indiced Diff: 21
+
+Fixed Path: /2010:03:03-2012:01:02/Phillip Wilkerson - Another Light.mp3/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/2010:03:03-2012:01:02/Phillip Wilkerson - Another Light.mp3", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/Phillip Wilkerson - Another Light.mp3"
+First part of path: 2010:03:03-2012:01:02/Phillip Wilkerson 
+Second part of path:  Another Light.mp3
+    st_dev = 2053
+    st_ino = 1968688
+    st_mode = 0100664
+    st_nlink = 1
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 8665740
+    st_blksize = 4096
+    st_blocks = 16928
+    st_atime = 0x4f9de36f
+    st_mtime = 0x4f999f22
+    st_ctime = 0x4f999f22
+
+bb_getattr(path="/2010:03:03-2012:01:02/cover.jpg", statbuf=0xb77731b0)
+
+Indiced Diff: 21
+
+Fixed Path: /2010:03:03-2012:01:02/cover.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/2010:03:03-2012:01:02/cover.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/cover.jpg"
+First part of path: 2010:03:03
+Second part of path: 2012:01:02/cover.jpg
+
+bb_getattr(path="/2010:03:03-2012:01:02/Devos_SLT.html", statbuf=0xb6f501b0)
+
+Indiced Diff: 21
+
+Fixed Path: /2010:03:03-2012:01:02/Devos_SLT.html/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/2010:03:03-2012:01:02/Devos_SLT.html", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/Devos_SLT.html"
+First part of path: 2010:03:03
+Second part of path: 2012:01:02/Devos_SLT.html
+
+bb_getattr(path="/2010:03:03-2012:01:02/index.html", statbuf=0xb77731b0)
+
+Indiced Diff: 21
+
+Fixed Path: /2010:03:03-2012:01:02/index.html/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/2010:03:03-2012:01:02/index.html", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/index.html"
+First part of path: 2010:03:03
+Second part of path: 2012:01:02/index.html
+
+bb_getattr(path="/2010:03:03-2012:01:02/How fast.ogg", statbuf=0xb6f501b0)
+
+Indiced Diff: 21
+
+Fixed Path: /2010:03:03-2012:01:02/How fast.ogg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/2010:03:03-2012:01:02/How fast.ogg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/How fast.ogg"
+First part of path: 2010:03:03
+Second part of path: 2012:01:02/How fast.ogg
+
+bb_getattr(path="/2010:03:03-2012:01:02/Andrew Martin resume.txt", statbuf=0xb77731b0)
+
+Indiced Diff: 21
+
+Fixed Path: /2010:03:03-2012:01:02/Andrew Martin resume.txt/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/2010:03:03-2012:01:02/Andrew Martin resume.txt", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/Andrew Martin resume.txt"
+First part of path: 2010:03:03
+Second part of path: 2012:01:02/Andrew Martin resume.txt
+
+bb_getattr(path="/2010:03:03-2012:01:02/travel_0011.jpg", statbuf=0xb6f501b0)
+
+Indiced Diff: 21
+
+Fixed Path: /2010:03:03-2012:01:02/travel_0011.jpg/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/2010:03:03-2012:01:02/travel_0011.jpg", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/travel_0011.jpg"
+First part of path: 2010:03:03
+Second part of path: 2012:01:02/travel_0011.jpg
+
+bb_releasedir(path="/2010:03:03-2012:01:02", fi=0xb6f501e0)
+    flags = 0x00000000
+    fh_old = 0x00000000
+    writepage = 0
+    direct_io = 0
+    keep_cache = 0
+    fh = 0x0000000000000000
+    lock_owner = 0x0000000000000000
+
+bb_getattr(path="/", statbuf=0xb77731a0)
+
+Indiced Diff: 0
+
+Fixed Path: //, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/"
+    st_dev = 2053
+    st_ino = 1966038
+    st_mode = 040775
+    st_nlink = 4
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x4f9de256
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/2010:03:03-2012:01:02", statbuf=0xb6f501b0)
+
+Indiced Diff: 21
+
+Fixed Path: /2010:03:03-2012:01:02/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/2010:03:03-2012:01:02", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/2010:03:03-2012:01:02"
+	ERROR bb_getattr lstat: No such file or directory
+First part of path: 2010:03:03
+Second part of path: 2012:01:02
+
+Indiced Diff: 21
+
+Fixed Path: /2010:03:03-2012:01:02/, Year: 0, Month: 0, Day: 0
+	ERROR bb_getattr lstat: No such file or directory
+First part of path: 2010:03:03
+Second part of path: 2012:01:02
+
+bb_getattr(path="/", statbuf=0xb6f501a0)
+
+Indiced Diff: 0
+
+Fixed Path: //, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/"
+    st_dev = 2053
+    st_ino = 1966038
+    st_mode = 040775
+    st_nlink = 4
+    st_uid = 1000
+    st_gid = 1000
+    st_rdev = 0
+    st_size = 4096
+    st_blksize = 4096
+    st_blocks = 8
+    st_atime = 0x4f9de256
+    st_mtime = 0x4f999f23
+    st_ctime = 0x4f999f23
+
+bb_getattr(path="/2010:03:03-2012:01:02", statbuf=0xb77731b0)
+
+Indiced Diff: 21
+
+Fixed Path: /2010:03:03-2012:01:02/, Year: 0, Month: 0, Day: 0
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/2010:03:03-2012:01:02", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/2010:03:03-2012:01:02"
+	ERROR bb_getattr lstat: No such file or directory
+First part of path: 2010:03:03
+Second part of path: 2012:01:02
+
+Indiced Diff: 0
+
+Fixed Path: //, Year: 0, Month: 0, Day: 0
+	ERROR bb_getattr lstat: No such file or directory
+
+bb_access(path="/", mask=01)
+	bb_fullpath:  rootdir = "/home/andrew/Documents/geanysvn/cs3210-proj3/source", path = "/", fpath = "/home/andrew/Documents/geanysvn/cs3210-proj3/source/"
+
+bb_destroy(userdata=0x09998028)
